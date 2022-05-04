@@ -21,3 +21,13 @@ Finally run the given .sh file from the original downloaded project in a termina
 Just make a double click in the given .bat file (MathallInitializer).
 
 ## Mathall 2.0.0 Preview
+
+## Permisions with the Mathall Project
+
+Anyone can use the source code of this project and base their own project
+in Mathall, at least notify or make a note in your project about your proyect it is an adaptation of
+Mathall. Otherwise there will be no reprisals or other consequences, cause i dont really care about it.
+
+Why does Mathall lend the code to everyone? Mathall from day one was established as an application 
+free code, so that anyone can access the source code of Mathall, make changes and create 
+other projects from this, because many people want to start coding a proyect about math and there's not an easy starting point to choose.
