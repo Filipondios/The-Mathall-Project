@@ -14,7 +14,8 @@ java -jar "Mathall/dist/Mathall.jar"
 #### Linux <img align="left" alt="Linux" width="26px" src="https://github.com/devicons/devicon/blob/v2.15.1/icons/linux/linux-original.svg" style="padding-right:10px;" />
 
 Run this command only one time: chmod +x mathallInit.sh
-Run the given .sh file from the original downloaded project in a terminal with the command ./mathallInit.sh
+
+Finally run the given .sh file from the original downloaded project in a terminal with the command ./mathallInit.sh
 
 #### Windows <img align="left" alt="Windows" width="26px" src="https://github.com/devicons/devicon/blob/v2.15.1/icons/windows8/windows8-original.svg" style="padding-right:10px;" />
 Just make a double click in the given .bat file (MathallInitializer).
