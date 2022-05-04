@@ -1,4 +1,4 @@
-# Mathall 2.0.0 Files & Executable .jar
+# What is Mathall 2.0.0?
 
 Mathall is a project which is focused on solving algebraic problems such as matrix determinants, solving systems of equations, etc. 
 
