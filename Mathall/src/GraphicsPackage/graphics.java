@@ -1,12 +1,17 @@
 package GraphicsPackage;
 
 public class graphics {
+
+	public String red="\033[31m";
+	public String white="\033[37m";
+	public String purple="\033[35m";
+
 	public void Graphics() {
-		System.out.println("\033[37m|MENU PRINCIPAL DE MATHALL|                 \033[35m█   █    █  █████ █   █    █    █    █");
-		System.out.println("\033[37m#0-Salir de Mathall                         \033[35m██ ██   █ █   █   █   █   █ █   █    █");
-		System.out.println("\033[37m#1-Operaciones con Matrices                 \033[35m█ █ █  █   █  █   █████  █   █  █    █");
-		System.out.println("\033[37m#2-Resolucion de Sistemas                   \033[35m█   █  █████  █   █   █  █████  █    █");
-		System.out.println("                                            \033[35m█   █  █   █  █   █   █  █   █  ███  ███ @2.0.0");
+		System.out.println(white+"|MATHALL MAIN MENU|                          "+purple+"█   █    █  █████ █   █    █    █    █");
+		System.out.println(white+"#0- Exit Mathall                             "+purple+"██ ██   █ █   █   █   █   █ █   █    █");
+		System.out.println(white+"#1- Matrix Operations                        "+purple+"█ █ █  █   █  █   █████  █   █  █    █");
+		System.out.println(white+"#2- Equations Systems Resolution             "+purple+"█   █  █████  █   █   █  █████  █    █");
+		System.out.println("                                             "+purple+"█   █  █   █  █   █   █  █   █  ███  ███ @2.0.0");
 	}
 
 	public void ClearConsole() {
@@ -18,6 +23,6 @@ public class graphics {
 				System.out.print("\033[H\033[2J");
 				System.out.flush();
 			}
-		} catch (Exception e) {/*No hacer nada*/}
+		} catch (Exception e) {/*Do nothing*/}
 	}
 }

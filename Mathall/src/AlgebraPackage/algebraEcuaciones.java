@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import FormatPackage.fraccion;
 import java.io.IOException;
+
 import GraphicsPackage.graphics;
 
 public class algebraEcuaciones {
@@ -11,15 +12,14 @@ public class algebraEcuaciones {
 	Scanner sc = new Scanner(System.in);
 	graphics Gr = new graphics();
 
-	public void EcuacionSegundoGrado() throws IOException, InterruptedException {
+	public void SecondGradeEquation() throws IOException, InterruptedException {
 		Gr.ClearConsole();
 		try {
-			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████");
-			System.out.println("████████████████████████████████ ECUACIONES DE SEGUNDO GRADO ████████████████████████████████");
-			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████");
-			System.out.println();
+			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████"
+				+ "███████████████████████████ SECOND GRADE EQUATIONS RESOLUTION ███████████████████████████████\n"
+				+ "█████████████████████████████████████████████████████████████████████████████████████████████\\n");
 
-			System.out.println("Introduce los valores de los coeficientes de la ecuacion cuadratica: ax^2 + bx + c =0");
+			System.out.println("Type the equaton's value of the co-efficients a,b,c: ax^2 + bx + c =0");
 			System.out.print("--> a = ");
 			double a = sc.nextInt();
 			System.out.print("--> b = ");
@@ -27,150 +27,210 @@ public class algebraEcuaciones {
 			System.out.print("--> c = ");
 			double c = sc.nextInt();
 
-			System.out.println("\nSu ecuacion cuadratica es: " + a + "x^2 + " + b + "x + " + c + " =0");
+			System.out.println("\nYour second-grade equation is: " + a + "x^2 + " + b + "x + " + c + " = 0");
 			double discriminante = Math.pow(b, 2) - 4 * a * c;
 
-			int DISCRIMINANTE=(int)(Math.sqrt(discriminante));
+			if(discriminante<0) {System.out.println("There is no real solution to this equation.");}
 
-			if(discriminante<0) {System.out.println("No hay solucion real a la ecuacion");}
 			else {  
-				int x1=(int) (-b+Math.sqrt(discriminante)); int den=(int)(2*a);
-				int x2=(int) (-b-Math.sqrt(discriminante));
+				double x1= -b+Math.sqrt(discriminante); int den=(int)(2*a);
+				double x2= -b-Math.sqrt(discriminante);
 
-				if (discriminante-DISCRIMINANTE==0) {
-					/*Discriminante es un numero entero entero*/
+				if(isInt(Math.sqrt(discriminante))){
 
 					fraccion Solucion1 = new fraccion(x1,den);
 					fraccion Solucion2 = new fraccion(x2,den);
 
-					Solucion1.simplificar(Solucion1);
-					Solucion1.simplificar(Solucion2);
+					Solucion1.simplificarDouble(Solucion1);
+					Solucion1.simplificarDouble(Solucion2);
 
 					if(x1==x2){
-						System.out.println("Ecuación con una solucion doble.\n");
-						System.out.println("          |\nSolucion  |x= "+Solucion1);
+						System.out.println("Equation with only one solution.\n");
+						System.out.println("          |\nSolution  |x= "+Solucion1.toStringDouble());
 						System.out.println("          |");
 					}
 					else{
-						System.out.println("Ecuación con dos soluciones.\n");
-						System.out.println("          |x1= "+Solucion1+"\nSoluciones|");
-						System.out.println("          |x2= "+Solucion2);
+						System.out.println("Equation with two solutions.\n");
+						System.out.println("          |x1= "+Solucion1.toStringDouble()+"\nSolution|");
+						System.out.println("          |x2= "+Solucion2.getnumeradorDouble());
 					}
 				}
-				if (discriminante-DISCRIMINANTE>0) {
-					/*Discriminante es un numero con decimales*/
+				else{
+
 					a=2*a;b=-b;
-					System.out.println("Ecuación con dos soluciones.\n");
+					System.out.println("Equation with two solutions.\n");
 
 					if (b==0) {
-						System.out.printf("          |x1= [sqrt(%.0f)]/[%.0f]\nSoluciones|\n",discriminante,a);
+						System.out.printf("          |x1= [sqrt(%.0f)]/[%.0f]\nSolutions|\n",discriminante,a);
 						System.out.printf("          |x2= [-sqrt(%.0f)]/[%.0f]\n",discriminante,a);
 					}else{
-						System.out.printf("          |x1= [%.0f + sqrt(%.0f)]/[%.0f]\nSoluciones|\n",b,discriminante,a);
+						System.out.printf("          |x1= [%.0f + sqrt(%.0f)]/[%.0f]\nSolutions|\n",b,discriminante,a);
 						System.out.printf("          |x2= [%.0f - sqrt(%.0f)]/[%.0f]\n",b,discriminante,a);
 					}
-
 				}
 				System.out.println("");
 			}
 		
 		}catch (InputMismatchException e) {
-			System.out.println("Mathall-System.output~#: Revisa tu entrada: no es valida.\n");
+			sc.nextLine();
+			System.out.println(Gr.red+"Mathall-System."+Gr.white+"output~#: Check your input: its not accepted.\n");
 		}
 	}
 
-	public void Ecuaciones3x3() throws IOException, InterruptedException {
-		Gr.ClearConsole();
-		try {
-			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████");
-			System.out.println("██████████████████████████████████████ ECUACIONES DE 3X3 ████████████████████████████████████");
-			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████");
-			int sistema[][] = new int[3][4];
-			System.out.println("Resolucion de sistemas de 3 ecuaciones y tres incognitas.");
-			System.out.println("Introduzca los coeficientes del sistema: ");
 
-			for (int i = 0; i < sistema.length; i++) {
-				System.out.println("\nEcuacion numero " + (i + 1) + ": ");
-				System.out.print("Introduzca el coeficiente de x: ");
-				sistema[i][0] = sc.nextInt();
-				System.out.print("Introduzca el coeficiente de y: ");
-				sistema[i][1] = sc.nextInt();
-				System.out.print("Introduzca el coeficiente de z: ");
-				sistema[i][2] = sc.nextInt();
-				System.out.print("Introduzca el coeficiente independiente: ");
-				sistema[i][3] = sc.nextInt();
-			}
+	public void EquationSistems(){
+		
+		try {
+			Gr.ClearConsole();
+
+			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████\n"
+				+ "███████████████████████████ SECOND GRADE EQUATIONS RESOLUTION ███████████████████████████████\n"
+				+ "█████████████████████████████████████████████████████████████████████████████████████████████\n");
+
+			System.out.println("Type the number of variables and equations.");
+			System.out.print("Variables: "); int coef = sc.nextInt(); 
+			System.out.print("Equations: "); int equations = sc.nextInt();
+
 			System.out.println();
 
-			int SubMatriz[][] = new int[3][3];
+			double matrix [][] = new double [equations][coef+1];
+			readMatrix(matrix);
 
-			for (int i = 0; i < SubMatriz.length; i++) {
-				for (int j = 0; j < SubMatriz[i].length; j++) {
-					SubMatriz[i][j] = sistema[i][j];
+			System.out.println("Initial Augmented Matrix is : \n");
+			PrintMatrix(matrix);
+			System.out.println("");
+
+			// Order of Matrix(n)
+			int solvFlag = 0;
+
+			// Performing Matrix transformation
+			solvFlag = PerformOperation(matrix, matrix.length);
+
+			if (solvFlag == 1) { solvFlag = TypeOfSolution(matrix, matrix.length, solvFlag); }
+
+			// Printing Final Matrix
+			System.out.println("Final Augmented Matrix is : \n");
+			PrintMatrix(matrix);
+			System.out.println("");
+
+			// Printing Solutions(if exist)
+			PrintResult(matrix, matrix.length, solvFlag);
+			System.out.println();
+
+		} catch (InputMismatchException e) {
+			sc.nextLine();
+			System.out.println(Gr.red+"Mathall-System."+Gr.white+"output~#: Check your input: its not accepted.\n");
+		}
+	}
+	
+	// reduce matrix to reduced row echelon form
+	static int PerformOperation(double matrix[][], int rows)	{
+		int i, j, k = 0, c, solvFlag = 0;
+
+		// Performing elementary operations
+		for (i = 0; i < rows; i++) {
+			if (matrix[i][i] == 0) { //First element of the first row cant be 0.
+				c = 1;
+				while ((i + c) < rows && matrix[i + c][i] == 0) { c++; }
+
+				if ((i + c) == rows) {
+					solvFlag = 1;
+					break;
+				}
+				//Switching rows
+				for (j = i, k = 0; k <= rows; k++) {
+					double temp =matrix[j][k];
+					matrix[j][k] = matrix[j+c][k];
+					matrix[j+c][k] = temp;
 				}
 			}
-			if (DET3x3(SubMatriz) != 0) {
-				int MatrizX[][] = new int[3][3];
-				copiarA(MatrizX, SubMatriz);
-				int MatrizY[][] = new int[3][3];
-				copiarA(MatrizY, SubMatriz);
-				int MatrizZ[][] = new int[3][3];
-				copiarA(MatrizZ, SubMatriz);
-
-				for (int i = 0; i < SubMatriz.length; i++) {
-					MatrizX[i][0] = sistema[i][3];
+			
+			//reducing rows into row echelon form
+			for (j = 0; j < rows; j++) {
+				if (j != i) {
+					double LCM = matrix[j][i] / matrix[i][i]; //LCM = Less Common Multiple
+					for (k = 0; k <= rows; k++) { matrix[j][k] = matrix[j][k] - (matrix[i][k]) * LCM; }            
 				}
-				for (int i = 0; i < SubMatriz.length; i++) {
-					MatrizY[i][1] = sistema[i][3];
-				}
-				for (int i = 0; i < SubMatriz.length; i++) {
-					MatrizZ[i][2] = sistema[i][3];
-				}
-
-				System.out.print("El sistema es compatible determinado, tiene 1 solucion: ");
-				fraccion x = new fraccion(DET3x3(MatrizX), DET3x3(SubMatriz));
-				x.simplificar(x);
-				System.out.print("(" + x + ", ");
-
-				fraccion y = new fraccion(DET3x3(MatrizY), DET3x3(SubMatriz));
-				y.simplificar(y);
-				System.out.print(y + ", ");
-
-				fraccion z = new fraccion(DET3x3(MatrizZ), DET3x3(SubMatriz));
-				z.simplificar(z);
-				System.out.print(z + ")");
-
-				System.out.println();
-				System.out.println();
 			}
+		}
+		return solvFlag;
+	}
+
+	// To check whether infinite solutions
+	// exists or no solution exists
+	// solvFlag == 2 for infinite solution
+	// solvFlag == 3 for No solution
+	static int TypeOfSolution(double matrix[][], int rows, int solvFlag) {
+		int i, j;
+		double counter;
+
+		solvFlag = 3;
+		for (i = 0; i < rows; i++) {
+			counter = 0;
+			for (j = 0; j < rows; j++) { counter += matrix[i][j]; }
+			if (counter == matrix[i][j]) { solvFlag = 2; }    
+		}
+		return solvFlag;
+	}
+
+	// Function to print the matrix
+	public static boolean negativeLocatedInColumn(double [][] matrix, int column) {
+		boolean negative = false;
+		for (int i = 0; i < matrix.length; i++) {
+			if (matrix[i][column] < 0) { negative=true;break;}
+		}
+		return negative;
+	}
+
+	public static boolean isInt(double number) {
+		if (number - (int) number == 0) { return true; }
+		else return false;
+	}
+
+	public static void PrintMatrix(double [][] matrix) {
+
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[i].length; j++) {
+
+				if (negativeLocatedInColumn(matrix,j) && matrix[i][j]>=0) { 
+					if (isInt(matrix[i][j])) { System.out.print(" "+ (int) matrix[i][j] +"\t");}
+					else System.out.print(" "+matrix[i][j]+"\t"); 
+				}
+				else { 
+					if (isInt(matrix[i][j])) { System.out.print((int) matrix[i][j]+"\t");}
+					else System.out.print(matrix[i][j]+"\t"); }
+			}System.out.println();
+		}		
+	}
+
+	// Function to print the desired result
+	// if unique solutions exists, otherwise
+	// prints no solution or infinite solutions
+	// depending upon the input given.
+
+	static void PrintResult(double a[][], int rows, int solvFlag){
+
+		System.out.println("The final result, in order is : \n");
+
+		if (solvFlag == 2) { System.out.println("Infinite Solutions Exists"); }
+		else if (solvFlag == 3) { System.out.println("No Solution Exists"); }
 		
-		}catch (InputMismatchException e) {
-			System.out.println("Mathall-System.output~#: Revisa tu entrada: no es valida.\n");
-		}
+		
+		else for (int i = 0; i < rows; i++) {
+			if (isInt(a[i][rows] / a[i][i])) { System.out.println("--| "+ (int) (a[i][rows] / a[i][i]));}
+			else System.out.println("--| "+a[i][rows] / a[i][i]);
+		}    
 	}
 
-	/*------------------------------------METODOS-FUNCIONES COMUNES A TODOS LOS OTROS METODOS-----------------------*/
-	public void mostrarMatriz(int[][] matriz) {
-		for (int k = 0; k < matriz.length; k++) {
-			System.out.print("\n");
-			for (int l = 0; l < matriz[k].length; l++) {
-				System.out.print(matriz[k][l] + "\t");
-			}
-		}
-		System.out.println();
-	}
+	public void readMatrix(double [][]matrix) {
+		@SuppressWarnings("resource") Scanner sc =new Scanner(System.in);
 
-	public void copiarA(int[][] matriz1, int[][] matriz2) {
-		for (int i = 0; i < matriz2.length; i++) {
-			for (int j = 0; j < matriz2.length; j++) {
-				matriz1[i][j] = matriz2[i][j];
-			}
+		for (int i = 0; i < matrix.length; i++) {
+			System.out.println("-----------------------------------------ROW "+(i+1)+"-----------------------------------------------\n");
+			for (int j = 0; j < matrix[i].length; j++) {
+				if (j == matrix[i].length-1) { System.out.print("--> Type this row's single term: "); matrix[i][j]=sc.nextInt(); }
+				else { System.out.print("--> Type the co-efficient ["+(j+1)+"]: "); matrix[i][j]=sc.nextInt(); }
+			}System.out.println();
 		}
-	}
-
-	public int DET3x3(int matriz[][]) {
-		int Determinante = matriz[0][0] * matriz[1][1] * matriz[2][2] + matriz[1][0] * matriz[2][1] * matriz[0][2] + matriz[0][1] * matriz[1][2] * matriz[2][0]
-				- matriz[0][2] * matriz[1][1] * matriz[2][0] - matriz[0][1] * matriz[1][0] * matriz[2][2] - matriz[1][2] * matriz[2][1] * matriz[0][0];
-		return Determinante;
 	}
 }
