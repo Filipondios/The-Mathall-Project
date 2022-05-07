@@ -21,6 +21,7 @@ Finally run the given .sh file from the original downloaded project in a termina
 Just make a double click in the given .bat file (mathallInitializer).
 
 ## Mathall 2.0.0 Preview
+<img align="left" alt="Windows" width="26px" src="https://raw.githubusercontent.com/Filipondios/The-Mathall-Project/6ecc3d3082e791f0070123af549ee62f010200bd/Mathall/preview/Teaser.png" style="padding-right:10px;" />
 
 ## Permisions with the Mathall Project
 
