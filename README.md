@@ -4,6 +4,14 @@ Mathall is a project which is focused on solving algebraic problems such as matr
 
 Due to the short time available and the lack of knowledge, this same program is not yet made with graphical interfaces, so Mathall will be available only for terminal.
 
+## What operations can Mathall 2.0.0 do?
+
+At this version, Mathall can do opetations with matrix and resolution of equations. Here is the list of the exact opetations
+that you can do in Mathall 2.0.0:
+
+- Operations with matrix: Addition-Difference between two matrix, product of two matrix, determinant of any matrix, range of a 2x2 or  3x3 matrix. 
+- Equation solving: Second-Grade equations resolution, any equation system resolution.
+
 ## How to Run Mathall 2.0.0
 For both operating systems described below, there is a common way, which is to open the terminal and only run the following command (ALWAYS FROM THE DIRECTORY THAT THE MATHALL PROJECT IS LOCATED):
 
