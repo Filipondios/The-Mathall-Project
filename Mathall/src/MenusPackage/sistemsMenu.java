@@ -22,7 +22,7 @@ public class sistemsMenu {
 				System.out.println("|EQUATION SYSTEMS RESOLUTION MENU |");
 				System.out.println("#0- Exit menu");
                 System.out.println("#1- Resolution of second grade equations");
-				System.out.println("#2- Resolution any equation system\n");
+				System.out.println("#2- Resolution 2x2 or 3x3 systems\n");
                                
 				System.out.print(Gr.red+"user"+Gr.white+"@"+userData.Username+"~# ");int entry = sc.nextInt(); 
 				System.out.println();
