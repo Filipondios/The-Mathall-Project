@@ -84,10 +84,12 @@ public class algebraEcuaciones {
 			Gr.ClearConsole();
 
 			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████\n"
-				+ "███████████████████████████ SECOND GRADE EQUATIONS RESOLUTION ███████████████████████████████\n"
+				+ "█████████████████████████████ 2x2 OR 3x3 SYSTEMS RESOLUTION █████████████████████████████████\n"
 				+ "█████████████████████████████████████████████████████████████████████████████████████████████\n");
 
-			System.out.println("Type the number of variables and equations.");
+			System.out.println("Type the number of variables and equations (2&2 or 3&3). If you type any other combination,"
+			+"the solution won't be correct.");
+
 			System.out.print("Variables: "); int coef = sc.nextInt(); 
 			System.out.print("Equations: "); int equations = sc.nextInt();
 
