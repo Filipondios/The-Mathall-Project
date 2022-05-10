@@ -2,6 +2,7 @@ package GraphicsPackage;
 
 public class graphics {
 
+	public String bold="\033[0;1m"; 
 	public String red="\033[31m";
 	public String white="\033[37m";
 	public String purple="\033[35m";

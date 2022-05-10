@@ -1,5 +1,6 @@
 package MenusPackage;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import AlgebraPackage.algebraEcuaciones;
 import GraphicsPackage.graphics;
@@ -33,7 +34,7 @@ public class sistemsMenu {
 					default:break;
 				}
 			}
-			catch(java.lang.NumberFormatException e) {
+			catch(InputMismatchException e) {
 				sc.nextLine(); 
 				KeepModule = false;
 				System.out.println(Gr.red+"Mathall-System."+Gr.white+"output~#: Check your input: its not accepted.\n");

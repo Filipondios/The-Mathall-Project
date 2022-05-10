@@ -17,7 +17,7 @@ public class mathallmainclass {
 		graphics Gr = new graphics();
 
 		boolean KeepModule = true, RuntimeErrors=false;
-		
+		System.out.println("Bold");
 		while(KeepModule) {
 			try {
 				Gr.ClearConsole(); Gr.Graphics();

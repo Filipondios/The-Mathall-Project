@@ -88,9 +88,9 @@ public class algebraEcuaciones {
 				+ "█████████████████████████████████████████████████████████████████████████████████████████████\n");
 
 			System.out.println("Type the number of variables and equations (2&2 or 3&3). If you type any other combination,"
-			+"the solution won't be correct.");
+			+"\nthe solution won't be correct.");
 
-			System.out.print("Variables: "); int coef = sc.nextInt(); 
+			System.out.print("\nVariables: "); int coef = sc.nextInt(); 
 			System.out.print("Equations: "); int equations = sc.nextInt();
 
 			System.out.println();
