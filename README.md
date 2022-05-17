@@ -1,4 +1,4 @@
-# What is Mathall 2.0.0?
+# What is Mathall?
 
 Mathall is a project which is focused on solving algebraic problems such as matrix determinants, solving systems of equations, etc. 
 
