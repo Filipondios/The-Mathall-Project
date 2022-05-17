@@ -36,13 +36,3 @@ Just make a double click in the given .exe file (MathallRun.exe).
 
 ## Mathall 2.0.0 Preview
 <img src="https://raw.githubusercontent.com/Filipondios/The-Mathall-Project/6ecc3d3082e791f0070123af549ee62f010200bd/Mathall/preview/Teaser.png" style="padding-right:10px;"/>
-
-## Permisions with the Mathall Project
-
-Anyone can use the source code of this project and base their own project
-in Mathall, at least notify or make a note in your project about your proyect it is an adaptation of
-Mathall. Otherwise there will be no reprisals or other consequences, cause i dont really care about it.
-
-Why does Mathall lend the code to everyone? Mathall from day one was established as an application 
-free code, so that anyone can access the source code of Mathall, make changes and create 
-other projects from this, because many people want to start coding a proyect about math and there's not an easy starting point to choose.
