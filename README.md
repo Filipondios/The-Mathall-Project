@@ -41,4 +41,4 @@ Just make a double click in the given .exe file (MathallRun.exe).
 - Better Graphic inferface in the different menus
 - New input system: Fractions will be accepted. At this day, Mathall only accepts int or decimal inputs.
 - Better inplementation of the code to upgrade the program performance and understanding.
-- A new package to perform calculations on the euclidean space **( Possibly this update will come in Mathall 3.0.0 )**
+- A new package to perform calculations on the euclidean space **(Possibly this update will come in Mathall 3.0.0)**
