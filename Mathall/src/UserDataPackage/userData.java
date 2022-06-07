@@ -1,6 +1,6 @@
-package UserDataPackage;
+package userDataPackage;
 
-public class userData {
+public class UserData {
     public static String Username = System.getProperty("user.name");
-    public static String OS = System.getProperty("os.name");
+    public String OS = (System.getProperty("os.name").contains("Windows")) ? "Windows" : "Other";
 }

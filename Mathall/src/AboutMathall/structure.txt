@@ -2,20 +2,47 @@ PROYECT STRUCTURE
 
 The Mathall proyect is organized like this:
 
-->Mathall
-	-> AboutMathall
+-> src ( Code )
+	-> aboutMathall
 		-> structure.txt (This file)
-	-> MathMainPackage
-		-> mathallmainpackage.java
-	-> AlgebraPackage
-		-> algebraMatrices.java
-		-> algebraEcuaciones.java
-	-> FormatPackage
-		-> fraccion.java
-	-> MenusPackage
-		-> matricesMenu.java
-		-> sistemasMenu.java
-	-> GraphicsPackage
-		-> graphics.java
-	-> UserDataPackage
-		-> userData.java
+	-> mathMainPackage
+		-> Mathallmainpackage.java
+	-> algebraPackage
+		-> AlgebraMatrices.java
+		-> AlgebraEcuaciones.java
+	-> formatPackage
+		-> Fraccion.java
+		-> Line.java
+		-> Vector.java
+	-> menusPackage
+		-> MatricesMenu.java
+		-> SistemasMenu.java
+	-> graphicsPackage
+		-> Graphics.java
+	-> userDataPackage
+		-> UserData.java
+		
+-> dist (Mathall .jar executable)
+	-> Mathall.jar
+	
+-> doc ( Documentation )
+
+-> uml ( Graphic representation of the src java clases)
+	-> mathMainPackage
+		-> Mathallmainpackage.cld
+	-> algebraPackage
+		-> AlgebraMatrices.cld
+		-> AlgebraEcuaciones.cld
+	-> formatPackage
+		-> Fraccion.cld
+		-> Line.cld
+		-> Vector.cld
+	-> menusPackage
+		-> MatricesMenu.cld
+		-> SistemasMenu.cld
+	-> graphicsPackage
+		-> Graphics.cld
+	-> userDataPackage
+		-> UserData.cld
+
+		

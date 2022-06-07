@@ -1,18 +1,19 @@
-package MenusPackage;
+package menusPackage;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import AlgebraPackage.algebraEcuaciones;
-import GraphicsPackage.graphics;
-import UserDataPackage.userData;
+
+import algebraPackage.AlgebraEcuations;
+import graphicsPackage.Graphics;
+import userDataPackage.UserData;
 
 import java.io.IOException;
 
-public class sistemsMenu {
+public class SistemsMenu {
 
 	Scanner sc = new Scanner(System.in);
-	algebraEcuaciones Al = new algebraEcuaciones();
-	graphics Gr = new graphics();
+	AlgebraEcuations Al = new AlgebraEcuations();
+	Graphics Gr = new Graphics();
 
 	public void MenuOnSistemas() throws IOException, InterruptedException {
 
@@ -20,17 +21,16 @@ public class sistemsMenu {
 
 		while (KeepModule) {
 			try {
-				System.out.println("|EQUATION SYSTEMS RESOLUTION MENU |");
-				System.out.println("#0- Exit menu");
-                System.out.println("#1- Resolution of second grade equations");
-				System.out.println("#2- Resolution 2x2 or 3x3 systems\n");
-                               
-				System.out.print(Gr.red+"user"+Gr.white+"@"+userData.Username+"~# ");int entry = sc.nextInt(); 
+				System.out.println("|EQUATION SYSTEMS RESOLUTION MENU |\n"
+					+"├─[0]─ Exit menu\n"
+					+"└─[1]─ Resolution of second grade equations\n");
+				
+				System.out.print(Gr.red+"user"+Gr.white+"@"+UserData.Username+"~# ");int entry = sc.nextInt(); 
 				System.out.println();
 
 				switch (entry) {
+					case 0:KeepModule=false;break;
 					case 1:Al.SecondGradeEquation();break;
-                	case 2:Al.EquationSistems();break;
 					default:break;
 				}
 			}
