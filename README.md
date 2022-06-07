@@ -4,15 +4,15 @@ Mathall is a project which is focused on solving algebraic problems such as matr
 
 Due to the short time available and the lack of knowledge, this same program is not yet made with graphical interfaces, so Mathall will be available only for terminal for a time.
 
-## What operations can Mathall 2.0.0 do?
+## What operations can Mathall 2.1.0 do?
 
 At this version, Mathall can do opetations with matrix and resolution of equations. Here is the list of the exact opetations
-that you can do in Mathall 2.0.0:
+that you can do in Mathall 2.1.0:
 
 - Operations with matrix: Addition-Difference between two matrix, product of two matrix, determinant of any matrix, range of a 2x2 or  3x3 matrix. 
-- Equation solving: Second-Grade equations resolution, 2x2 or 3x3 systems resolution.
+- Equation solving: Second-Grade equations resolution.
 
-## How to Run Mathall 2.0.0
+## How to Run Mathall 2.1.0
 For both operating systems described below, there is a common way, which is to open the terminal and only run the following command (ALWAYS FROM THE DIRECTORY THAT THE MATHALL PROJECT IS LOCATED):
 
 ```bash
@@ -34,11 +34,18 @@ Run the given executable file from the original downloaded project in a terminal
 Just make a double click in the given .exe file (MathallRun.exe).
 </pre>
 
-## Mathall 2.0.0 Preview
+## Mathall 2.1.0 Preview
 <img src="https://raw.githubusercontent.com/Filipondios/The-Mathall-Project/6ecc3d3082e791f0070123af549ee62f010200bd/Mathall/preview/Teaser.png" style="padding-right:10px;"/>
 
+## Whats new in Mathall?
+- New input system: Fractions will be accepted. At this day, Mathall only accepts integer or fraction numbers. 
+- Better graphic inferface in the different menus.
+- Because of the new input system, the menu to solve equation systems is tempoarly removed.
+- Domentation is available now in the folder Mathall/doc. To see all documentation in your browser, open index.html.
+
 ## Whats next in Mathall?
-- Better graphic inferface in the different menus
-- New input system: Fractions will be accepted. At this day, Mathall only accepts int or decimal inputs.
 - Better inplementation of the code to upgrade the program performance and understanding.
+- Resolution of any equation system.
+- Gauss method to get a staggered matrix.
+- Range of any matrix.
 - A new package to perform calculations on the euclidean space **(Possibly this update will come in Mathall 3.0.0)**
