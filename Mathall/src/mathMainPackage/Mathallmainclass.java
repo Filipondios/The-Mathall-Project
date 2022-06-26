@@ -7,8 +7,9 @@ import graphicsPackage.Graphics;
 import menusPackage.*;
 import userDataPackage.UserData;
 
-/**Mathall Main Class. Calls the method that loads the logo and the first menu.
- * @author Filipondios*/
+/**Mathall Main Class. Calls the method that loads the logo and the first menu from {@link Graphics}.
+ * @author Filipondios
+ * @version 26.06.2022*/
 public class Mathallmainclass {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
