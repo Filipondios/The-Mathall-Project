@@ -7,7 +7,7 @@ Due to the short time available and the lack of knowledge, this same program is 
 ## What operations can Mathall 2.2.0 do?
 
 At this version, Mathall can do opetations with matrix and resolution of equations. Here is the list of the exact opetations
-that you can do in Mathall 2.1.0:
+that you can do in Mathall 2.2.0:
 
 - Operations with matrix: Addition-Difference between two matrix, product of two matrix, determinant of any matrix, range of any matrix, inverse of a square matrix, row echelon form of a matrix (Gauss Method applied to its rows) and transpose of any matrix.
 - Equation solving: Second-Grade equations resolution.
