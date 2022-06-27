@@ -4,15 +4,15 @@ Mathall is a project which is focused on solving algebraic problems such as matr
 
 Due to the short time available and the lack of knowledge, this same program is not yet made with graphical interfaces, so Mathall will be available only for terminal for a time.
 
-## What operations can Mathall 2.1.0 do?
+## What operations can Mathall 2.2.0 do?
 
 At this version, Mathall can do opetations with matrix and resolution of equations. Here is the list of the exact opetations
 that you can do in Mathall 2.1.0:
 
-- Operations with matrix: Addition-Difference between two matrix, product of two matrix, determinant of any matrix, range of any matrix. 
+- Operations with matrix: Addition-Difference between two matrix, product of two matrix, determinant of any matrix, range of any matrix, inverse of a square matrix, row echelon form of a matrix (Gauss Method applied to its rows) and transpose of any matrix.
 - Equation solving: Second-Grade equations resolution.
 
-## How to Run Mathall 2.1.0
+## How to Run Mathall 2.2.0
 For both operating systems described below, there is a common way, which is to open the terminal and only run the following command (ALWAYS FROM THE DIRECTORY THAT THE MATHALL PROJECT IS LOCATED):
 
 ```bash
@@ -38,14 +38,12 @@ Just make a double click in the given .exe file (MathallRun.exe) <br><b>OR</b> c
 <img src="https://raw.githubusercontent.com/Filipondios/The-Mathall-Project/6ecc3d3082e791f0070123af549ee62f010200bd/Mathall/preview/Teaser.png" style="padding-right:10px;"/>
 
 ## Whats new in Mathall?
-- Range of any matrix.
+- Row echelon form of any matrix.
+- Inverse of a square matrix.
+- Transpose of any matrix.
 - New input system: Fractions will be accepted. At this day, Mathall only accepts integer or fraction numbers. 
-- Better graphic inferface in the different menus.
 - Domentation is available now in the folder Mathall/doc. To see all documentation in your browser, open index.html.
 
 ## Whats next in Mathall?
 - Resolution of any equation system.
-- Row echelon form of a matrix.
-- Inverse of a matrix.
-- Transpose of a matrix.
 - A new package to perform calculations on the euclidean space **(Possibly this update will come in Mathall 3.0.0)**
