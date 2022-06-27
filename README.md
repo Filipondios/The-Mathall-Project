@@ -34,8 +34,8 @@ Run the given executable file from the original downloaded project in a terminal
 Just make a double click in the given .exe file (MathallRun.exe) <br><b>OR</b> click the link with icon (Mathall - Its recomended because gives a better look in the Windows terminal).
 </pre>
 
-## Mathall 2.1.0 Preview
-<img src="https://raw.githubusercontent.com/Filipondios/The-Mathall-Project/6ecc3d3082e791f0070123af549ee62f010200bd/Mathall/preview/Teaser.png" style="padding-right:10px;"/>
+## Mathall 2.2.0 Preview
+![imagen](https://user-images.githubusercontent.com/91225771/176029340-1082e20c-76e6-4193-9e2c-87e8935c13c8.png)
 
 ## Whats new in Mathall?
 - Row echelon form of any matrix.
