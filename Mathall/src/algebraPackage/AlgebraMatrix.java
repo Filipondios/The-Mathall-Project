@@ -5,12 +5,18 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import filipondiosUtils.*;
 import graphicsPackage.Graphics;
-
+import menusPackage.MatrixMenu;
+/**Class that contains different methods to make operations and transformations to matrices.
+ * This loads a method that was chosen by the user in {@link MatrixMenu}. In case that the entry
+ * in any method is not correct, the user will be returned to Mathall main menu {@link MatrixMenu}. 
+ * @author Filipondios
+ * @version 27.06.2022*/
 public class AlgebraMatrix {
 	Scanner sc = new Scanner(System.in);
 	Graphics Gr = new Graphics();
 	Matrix mt = new Matrix();
 	
+	/**Method that calculates the addition or the substraction of two matrices given by the user's inputs.*/
 	public void MatrixAddSub() throws IOException, InterruptedException{
 		Gr.ClearConsole();
 		try {
@@ -65,6 +71,7 @@ public class AlgebraMatrix {
 		}
 	}
 	
+	/**Method that calculates the product of two matrices given by the user's inputs.*/
 	public void MatrixProduct() throws IOException, InterruptedException{
 		Gr.ClearConsole();
 		try {
@@ -130,6 +137,7 @@ public class AlgebraMatrix {
 		}
 	}
 
+	/**Method that calculates a determinate power of a matrix given by the user's input.*/
 	public void MatrixPower() throws IOException, InterruptedException{
 		Gr.ClearConsole();
 		try {
@@ -162,6 +170,7 @@ public class AlgebraMatrix {
 		}
 	}
 
+	/**Method that calculates the determinant of a matrix given by the user's input.*/
 	public void MatrixDeterminant() throws IOException, InterruptedException{
 		Gr.ClearConsole();
 		try {
@@ -196,62 +205,33 @@ public class AlgebraMatrix {
 		}
 	}
 
-	public void MatrixRange() throws IOException, InterruptedException{
+	/**Method that calculates the range of a matrix given by the user's input.*/
+	public void MatrixRank() throws IOException, InterruptedException{
 		Gr.ClearConsole();
 		try {
 			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████\n"
-			+"█████████████████████████████████████████ MATRIX RANGE ██████████████████████████████████████\n"
+			+"█████████████████████████████████████████ MATRIX RANK ███████████████████████████████████████\n"
 			+"█████████████████████████████████████████████████████████████████████████████████████████████\n");
 
-			int Dimension,Ran=1;
-			System.out.print("¿What dimension do you want for your matrix? (2x2 o 3x3):");Dimension= sc.nextInt();
+			int F=0,C=0;
+			System.out.println("Type the dimensions of the matrix:");
+			System.out.print("Rows: ");F=sc.nextInt();
+			System.out.print("Columns: ");C=sc.nextInt();
 
-			while (Dimension!=2 && Dimension!=3){
-				System.out.println("The dimension of the matrix can't be different of 2 or 3.");
-				System.out.print("¿What dimension do you want for your matrix? (2x2 o 3x3):");Dimension= sc.nextInt();
-				System.out.println();
+			while (F<=0 || C<=0){
+				System.out.println("Type the dimensions of the matrix:");
+				System.out.print("Rows: ");F=sc.nextInt();
+				System.out.print("Columns: ");C=sc.nextInt();
 			}
 
-			FormattedNumber[][] matrix=new FormattedNumber[Dimension][Dimension];
+			FormattedNumber[][] matrix=new FormattedNumber[F][C];
 			System.out.print("\n");
 			mt.readMatrix(matrix);
 
 			System.out.println("Your argumented matrix is:");
 			mt.printMatrix(matrix);
-			System.out.println();
-
-
-			if (Dimension==2) {
-				if (mt.determinant(matrix).doubleValue()==0) {
-					Ran=2;
-				}else Ran=1;
-				System.out.println("The range of your matrix is: "+Ran);
-			}
-
-			if (Dimension==3) {
-				if (mt.determinant(matrix).doubleValue()!=0) {
-					Ran=3;
-					System.out.println("The range of your matrix is: "+Ran);
-				}
-				if (mt.determinant(matrix).doubleValue()==0) {
-
-					FormattedNumber[]attached=new FormattedNumber[6];
-					attached[0]=attached[0].productOf(matrix[0][0].product(matrix[1][1]), matrix[0][1].product(matrix[1][0]));
-					attached[1]=attached[1].productOf(matrix[0][0].product(matrix[1][2]), matrix[0][2].product(matrix[1][0]));
-					attached[2]=attached[2].productOf(matrix[0][1].product(matrix[1][2]), matrix[1][1].product(matrix[0][2]));
-					attached[3]=attached[3].productOf(matrix[1][0].product(matrix[2][1]), matrix[1][1].product(matrix[2][0]));
-					attached[4]=attached[4].productOf(matrix[1][0].product(matrix[2][2]), matrix[1][2].product(matrix[2][0]));
-					attached[5]=attached[5].productOf(matrix[1][1].product(matrix[2][2]), matrix[1][2].product(matrix[2][1]));
+			System.out.println("\nThe rank of the given matrix is: "+mt.matrixRank(matrix)+"\n");
 					
-					for (int i = 0; i<attached.length; i++) {
-						if (attached[i].doubleValue()!=0) {
-							Ran=2;
-						}else System.out.println("The range of your matrix is: "+Ran);
-					}
-				}   
-			}
-			System.out.println();
-		
 		}catch (InputMismatchException | NumberFormatException e) {
 			sc.nextLine();
 			System.out.println(Gr.red+"Mathall-System."+Gr.white+"output~#: Check your input: its not accepted.\n");

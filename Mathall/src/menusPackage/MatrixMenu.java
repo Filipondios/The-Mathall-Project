@@ -33,7 +33,7 @@ public class MatrixMenu {
 				+ "├─[2]─ Product of any two matrix\n"
 				+ "├─[3]─ Power of any matrix\n"
 				+ "├─[4]─ Determinant of any square matrix\n"
-				+ "└─[5]─ Range any matrix\n");
+				+ "└─[5]─ Rank any matrix\n");
 
 				System.out.print(Gr.red+"user"+Gr.white+"@"+UserData.Username+"~# ");int entry=sc.nextInt(); 
 				System.out.println();
@@ -44,7 +44,7 @@ public class MatrixMenu {
 					case 2:Al.MatrixProduct();break;
 					case 3:Al.MatrixPower();break;
 					case 4:Al.MatrixDeterminant();break;
-					case 5:Al.MatrixRange();break;
+					case 5:Al.MatrixRank();break;
 					default:break;
 				}
 			}

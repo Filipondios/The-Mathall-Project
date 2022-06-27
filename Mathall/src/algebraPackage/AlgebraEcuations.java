@@ -5,9 +5,11 @@ import java.util.Scanner;
 import filipondiosUtils.FormattedNumber;
 import java.io.IOException;
 import graphicsPackage.Graphics;
+import menusPackage.SistemsMenu;
 
-/**Class that contains different methods to resolve equations and systems. As this class is 
- * implemented today, there is only one method (See it below ).
+/**Class that contains different methods to resolve equations and systems.This loads a method
+ * that was chosen by the user in {@link SistemsMenu}. In case that the entry in any method is
+ * not correct, the user will be returned to Mathall main menu {@link SistemsMenu}. 
  * @author Filipondios
  * @version 07.06.2022*/
 public class AlgebraEcuations {
@@ -59,7 +61,7 @@ public class AlgebraEcuations {
 					System.out.println(chain2+"\n"+slash+" = x2\n"+spaces+chain3+"\n");
 					
 				}else {
-					dis = dis.sqrt();
+					dis = dis.sqrt(dis);
 					FormattedNumber result1 = a.divisionOf(b.add(dis), a.product(new FormattedNumber(2)));
 					FormattedNumber result2 = a.divisionOf(b.substract(dis), a.product(new FormattedNumber(2)));
 					
