@@ -1,6 +1,5 @@
 package mathMainPackage;
 
-import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import graphicsPackage.Graphics;
@@ -12,7 +11,7 @@ import userDataPackage.UserData;
  * @version 26.06.2022*/
 public class Mathallmainclass {
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) throws Exception, InterruptedException {
 		
 		@SuppressWarnings("resource") Scanner sc = new Scanner(System.in);
 		MatrixMenu Mm = new MatrixMenu();

@@ -7,7 +7,7 @@ import java.io.IOException;
 import graphicsPackage.Graphics;
 import menusPackage.SistemsMenu;
 
-/**Class that contains different methods to resolve equations and systems.This loads a method
+/**Class that contains different methods to resolve equations and systems. This loads a method
  * that was chosen by the user in {@link SistemsMenu}. In case that the entry in any method is
  * not correct, the user will be returned to Mathall main menu {@link SistemsMenu}. 
  * @author Filipondios
@@ -21,7 +21,7 @@ public class AlgebraEcuations {
 	 * the imaginary solutions of equations in the case that there are not Real solutions, but it will be able to do that some day.
 	 * @throws IOException
 	 * @throws InterruptedException */
-	public void SecondGradeEquation() throws IOException, InterruptedException {
+	public void SecondGradeEquation() {
 		Gr.ClearConsole();
 		try {
 			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████\n"

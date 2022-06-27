@@ -1,6 +1,5 @@
 package algebraPackage;
 
-import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import filipondiosUtils.*;
@@ -14,10 +13,10 @@ import menusPackage.MatrixMenu;
 public class AlgebraMatrix {
 	Scanner sc = new Scanner(System.in);
 	Graphics Gr = new Graphics();
-	Matrix mt = new Matrix();
+	MatrixUtils mt = new MatrixUtils();
 	
 	/**Method that calculates the addition or the substraction of two matrices given by the user's inputs.*/
-	public void MatrixAddSub() throws IOException, InterruptedException{
+	public void MatrixAddSub() {
 		Gr.ClearConsole();
 		try {
 			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████\n"
@@ -72,7 +71,7 @@ public class AlgebraMatrix {
 	}
 	
 	/**Method that calculates the product of two matrices given by the user's inputs.*/
-	public void MatrixProduct() throws IOException, InterruptedException{
+	public void MatrixProduct() {
 		Gr.ClearConsole();
 		try {
 			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████\n"
@@ -138,7 +137,7 @@ public class AlgebraMatrix {
 	}
 
 	/**Method that calculates a determinate power of a matrix given by the user's input.*/
-	public void MatrixPower() throws IOException, InterruptedException{
+	public void MatrixPower() {
 		Gr.ClearConsole();
 		try {
 			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████\n"
@@ -171,7 +170,7 @@ public class AlgebraMatrix {
 	}
 
 	/**Method that calculates the determinant of a matrix given by the user's input.*/
-	public void MatrixDeterminant() throws IOException, InterruptedException{
+	public void MatrixDeterminant() {
 		Gr.ClearConsole();
 		try {
 			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████\n"
@@ -206,11 +205,45 @@ public class AlgebraMatrix {
 	}
 
 	/**Method that calculates the range of a matrix given by the user's input.*/
-	public void MatrixRank() throws IOException, InterruptedException{
+	public void MatrixRank() {
 		Gr.ClearConsole();
 		try {
 			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████\n"
 			+"█████████████████████████████████████████ MATRIX RANK ███████████████████████████████████████\n"
+			+"█████████████████████████████████████████████████████████████████████████████████████████████\n");
+
+			int F=0,C=0;
+			System.out.println("Type the dimensions of the matrix:");
+			System.out.print("Rows: ");F=sc.nextInt();
+			System.out.print("Columns: ");C=sc.nextInt();
+
+			while (F<=1 || C<=1){
+				System.out.println("The rows or the columns of the matrix can't be 1 or less.");
+				System.out.println("Type the dimensions of the matrix:");
+				System.out.print("Rows: ");F=sc.nextInt();
+				System.out.print("Columns: ");C=sc.nextInt();
+			}
+
+			FormattedNumber[][] matrix=new FormattedNumber[F][C];
+			System.out.print("\n");
+			mt.readMatrix(matrix);
+
+			System.out.println("Your argumented matrix is:");
+			mt.printMatrix(matrix);
+			System.out.println("\nThe rank of the given matrix is: "+mt.matrixRank(matrix)+"\n");
+					
+		}catch (InputMismatchException | NumberFormatException e) {
+			sc.nextLine();
+			System.out.println(Gr.red+"Mathall-System."+Gr.white+"output~#: Check your input: its not accepted.\n");
+		}
+	}
+	
+	/**Method that calculates the traspose of a matrix given by the user's input.*/
+	public void TransposeMatrix() {
+		Gr.ClearConsole();
+		try {
+			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████\n"
+			+"██████████████████████████████████████ TRANSPOSE MATRIX █████████████████████████████████████\n"
 			+"█████████████████████████████████████████████████████████████████████████████████████████████\n");
 
 			int F=0,C=0;
@@ -230,8 +263,88 @@ public class AlgebraMatrix {
 
 			System.out.println("Your argumented matrix is:");
 			mt.printMatrix(matrix);
-			System.out.println("\nThe rank of the given matrix is: "+mt.matrixRank(matrix)+"\n");
-					
+			
+			System.out.println("\nThe transpose of the original matrix is:");
+			FormattedNumber[][] transpose  = mt.transposeOf(matrix);
+			mt.printMatrix(transpose);
+			System.out.println();
+			
+		}catch (InputMismatchException | NumberFormatException e) {
+			sc.nextLine();
+			System.out.println(Gr.red+"Mathall-System."+Gr.white+"output~#: Check your input: its not accepted.\n");
+		}
+	}
+	
+	/**Method that calculates the row echelon form of a matrix given by the user's input.*/
+	public void RowEchelon() {
+		Gr.ClearConsole();
+		try {
+			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████\n"
+			+"████████████████████████████████ ROW ECHELON FORM OF A MATRIX ███████████████████████████████\n"
+			+"█████████████████████████████████████████████████████████████████████████████████████████████\n");
+
+			int F=0,C=0;
+			System.out.println("Type the dimensions of the matrix:");
+			System.out.print("Rows: ");F=sc.nextInt();
+			System.out.print("Columns: ");C=sc.nextInt();
+
+			while (F<=1 || C<=1){
+				System.out.println("The rows or the columns of the matrix can't be 1 or less.");
+				System.out.println("Type the dimensions of the matrix:");
+				System.out.print("Rows: ");F=sc.nextInt();
+				System.out.print("Columns: ");C=sc.nextInt();
+			}
+
+			FormattedNumber[][] matrix=new FormattedNumber[F][C];
+			System.out.print("\n");
+			mt.readMatrix(matrix);
+
+			System.out.println("Your argumented matrix is:");
+			mt.printMatrix(matrix);
+			
+			System.out.println("\nThe row echelon form of the original matrix is:");
+			mt.gaussMethod(matrix);
+			mt.printMatrix(matrix);
+			System.out.println();
+			
+		}catch (InputMismatchException | NumberFormatException e) {
+			sc.nextLine();
+			System.out.println(Gr.red+"Mathall-System."+Gr.white+"output~#: Check your input: its not accepted.\n");
+		}
+	}
+	
+	/**Method that calculates the inverse of a matrix given by the user's input.*/
+	public void InverseMatrix() {
+		Gr.ClearConsole();
+		try {
+			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████\n"
+			+"█████████████████████████████████████ INVERSE OF A MATRIX ███████████████████████████████████\n"
+			+"█████████████████████████████████████████████████████████████████████████████████████████████\n");
+
+			int D=0;
+			System.out.print("Type the dimension of the matrix: "); D=sc.nextInt();
+
+			while (D<=1){
+				System.out.println("\nThe dimension of the matrix can't be 1 or less.");
+				System.out.print("Type the dimension of the matrix: "); D=sc.nextInt();
+			}
+
+			FormattedNumber[][] matrix=new FormattedNumber[D][D];
+			System.out.print("\n");
+			mt.readMatrix(matrix);
+
+			System.out.println("Your argumented matrix is:");
+			mt.printMatrix(matrix);
+			
+			try {
+				FormattedNumber[][] inverse = mt.inverseMatrixOf(matrix);
+				System.out.println("\nThe inverse of the original matrix is:");
+				mt.printMatrix(inverse);
+			} catch (Exception e) {
+				System.out.println("There is no inverse for the matrix :(");
+			}
+			System.out.println();
+			
 		}catch (InputMismatchException | NumberFormatException e) {
 			sc.nextLine();
 			System.out.println(Gr.red+"Mathall-System."+Gr.white+"output~#: Check your input: its not accepted.\n");

@@ -6,8 +6,6 @@ import algebraPackage.AlgebraEcuations;
 import graphicsPackage.Graphics;
 import mathMainPackage.Mathallmainclass;
 import userDataPackage.UserData;
-
-import java.io.IOException;
 /**Class that allows the user the selection of the resolution of ecuation systems. This loads a menu,
  * which waits for an integer entry that represents the option chosen by the user. In case 
  * that the entry is not correct, the user will be returned to Mathall main menu {@link Mathallmainclass}. 
@@ -22,7 +20,7 @@ public class SistemsMenu {
 	/**Method that prints in console the ecuation systems resolution selection menu and 
 	 * depending on the user's choice, a determinated method of the class {@link AlgebraEcuations}
 	 * is initialized.*/
-	public void MenuOnSistemas() throws IOException, InterruptedException {
+	public void MenuOnSistemas() {
 		boolean KeepModule = true;
 
 		while (KeepModule) {
