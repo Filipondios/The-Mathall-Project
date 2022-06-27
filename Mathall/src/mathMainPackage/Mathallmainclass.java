@@ -22,7 +22,7 @@ public class Mathallmainclass {
 		while(KeepModule) {
 			try {
 				Gr.ClearConsole(); Gr.GraphicsMenu(); 
-				System.out.print(Gr.red+"user"+Gr.white+"@"+UserData.Username+"~# "); int input = sc.nextInt();
+				System.out.print(Gr.red+" user"+Gr.white+"@"+UserData.Username+"~# "); int input = sc.nextInt();
 				System.out.println();
 				
 				switch (input) {
@@ -34,12 +34,12 @@ public class Mathallmainclass {
 			} 
 			catch(InputMismatchException e) {
 				KeepModule = false; RuntimeErrors = true;
-				System.out.println(Gr.red+"Mathall-System."+Gr.white+"output~#: The program ended due some error."
+				System.out.println(Gr.red+" Mathall-System."+Gr.white+"output~#: The program ended due some error."
 						+ Gr.red+"\nMathall-System."+Gr.white+"output~#: Check your inputs and make sure it’s not caused by Mathall.");
 			}
 		}
 		if (!RuntimeErrors) {
-			System.out.println(Gr.red+"Mathall-System."+Gr.white+"output~#: The program ended succesfully.");
+			System.out.println(Gr.red+" Mathall-System."+Gr.white+"output~#: The program ended succesfully.");
 		}
 		Thread.sleep(5*1000);
 	}

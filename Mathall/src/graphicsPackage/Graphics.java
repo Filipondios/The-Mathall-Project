@@ -22,11 +22,11 @@ public class Graphics {
 	
 	/**Method that prints Mathall's logo and first menu.*/
 	public void GraphicsMenu() {
-		System.out.println(white+"|MATHALL MAIN MENU|                          "+purple+"█   █    █  █████ █   █    █    █    █");
-		System.out.println(white+"├─[0]─ Exit Mathall                          "+purple+"██ ██   █ █   █   █   █   █ █   █    █");
-		System.out.println(white+"├─[1]─ Matrix Operations                     "+purple+"█ █ █  █   █  █   █████  █   █  █    █");
-		System.out.println(white+"└─[2]─ Equations Systems Resolution          "+purple+"█   █  █████  █   █   █  █████  █    █");
-		System.out.println("                                             "+purple+"█   █  █   █  █   █   █  █   █  ███  ███ @2.1.0");
+		System.out.println(white+" |MATHALL MAIN MENU|                          "+purple+"█   █    █  █████ █   █    █    █    █");
+		System.out.println(white+" ├─[0]─ Exit Mathall                          "+purple+"██ ██   █ █   █   █   █   █ █   █    █");
+		System.out.println(white+" ├─[1]─ Matrix Operations                     "+purple+"█ █ █  █   █  █   █████  █   █  █    █");
+		System.out.println(white+" └─[2]─ Equations Systems Resolution          "+purple+"█   █  █████  █   █   █  █████  █    █");
+		System.out.println("                                              "+purple+"█   █  █   █  █   █   █  █   █  ███  ███ @2.2.0");
 	}
 	
 	/**I method that cleans the console, and depending on the user’s OS, it does it 

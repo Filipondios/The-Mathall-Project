@@ -14,9 +14,9 @@ public class MatrixUtils{
 	 * @param matrix {@link FormattedNumber} matrix.*/
 	public void readMatrix(FormattedNumber [][] matrix) throws InputMismatchException{
 		for (int i = 0; i < matrix.length; i++) {
-			System.out.println("──────────────────────────────────[ROW "+(i+1)+"]\n");
+			System.out.println(" ──────────────────────────────────[ROW "+(i+1)+"]\n");
 			for (int j = 0; j < matrix[0].length; j++) {
-				System.out.print("==> Type the value of the position ["+(i+1)+","+(j+1)+"]: "); matrix[i][j]=new FormattedNumber(sc.next());
+				System.out.print(" ==> Type the value of the position ["+(i+1)+","+(j+1)+"]: "); matrix[i][j]=new FormattedNumber(sc.next());
 			}System.out.println();
 		}
 	}
@@ -26,7 +26,7 @@ public class MatrixUtils{
 	public void printMatrix(FormattedNumber [][] matrix) {
 		for (int i = 0; i < matrix.length; i++) {
 			for (int j = 0; j < matrix[i].length; j++) {
-				System.out.print(matrix[i][j]+"\t");
+				System.out.print(" "+matrix[i][j]+"\t");
 			}System.out.println();
 		}		
 	}

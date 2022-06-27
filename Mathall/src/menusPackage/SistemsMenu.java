@@ -25,11 +25,11 @@ public class SistemsMenu {
 
 		while (KeepModule) {
 			try {
-				System.out.println("|EQUATION SYSTEMS RESOLUTION MENU |\n"
-					+"├─[0]─ Exit menu\n"
-					+"└─[1]─ Resolution of second grade equations\n");
+				System.out.println(" |EQUATION SYSTEMS RESOLUTION MENU |\n"
+					+" ├─[0]─ Exit menu\n"
+					+" └─[1]─ Resolution of second grade equations\n");
 				
-				System.out.print(Gr.red+"user"+Gr.white+"@"+UserData.Username+"~# ");int entry = sc.nextInt(); 
+				System.out.print(Gr.red+" user"+Gr.white+"@"+UserData.Username+"~# ");int entry = sc.nextInt(); 
 				System.out.println();
 
 				switch (entry) {
@@ -41,7 +41,7 @@ public class SistemsMenu {
 			catch(InputMismatchException e) {
 				sc.nextLine(); 
 				KeepModule = false;
-				System.out.println(Gr.red+"Mathall-System."+Gr.white+"output~#: Check your input: its not accepted.\n");
+				System.out.println(Gr.red+" Mathall-System."+Gr.white+"output~#: Check your input: its not accepted.\n");
 			}
 		}
 	}
