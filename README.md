@@ -31,21 +31,21 @@ Run the given executable file from the original downloaded project in a terminal
 #### Windows <img align="left" alt="Windows" width="26px" src="https://github.com/devicons/devicon/blob/v2.15.1/icons/windows8/windows8-original.svg" style="padding-right:10px;" />
 
 <pre>
-Just make a double click in the given .exe file (MathallRun.exe).
+Just make a double click in the given .exe file (MathallRun.exe) <br><b>OR</b> click the link with icon (Mathall - Its recomended because gives a better look in the Windows terminal).
 </pre>
 
 ## Mathall 2.1.0 Preview
 <img src="https://raw.githubusercontent.com/Filipondios/The-Mathall-Project/6ecc3d3082e791f0070123af549ee62f010200bd/Mathall/preview/Teaser.png" style="padding-right:10px;"/>
 
 ## Whats new in Mathall?
+- Range of any matrix.
 - New input system: Fractions will be accepted. At this day, Mathall only accepts integer or fraction numbers. 
 - Better graphic inferface in the different menus.
-- Because of the new input system, the menu to solve equation systems is tempoarly removed.
 - Domentation is available now in the folder Mathall/doc. To see all documentation in your browser, open index.html.
 
 ## Whats next in Mathall?
-- Better inplementation of the code to upgrade the program performance and understanding.
 - Resolution of any equation system.
-- Gauss method to get a staggered matrix.
-- Range of any matrix.
+- Row echelon form of a matrix.
+- Inverse of a matrix.
+- Transpose of a matrix.
 - A new package to perform calculations on the euclidean space **(Possibly this update will come in Mathall 3.0.0)**
