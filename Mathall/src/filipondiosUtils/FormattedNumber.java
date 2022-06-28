@@ -30,6 +30,12 @@ public class FormattedNumber implements Comparable<FormattedNumber>{
 		this.numerator = numerator;
 		this.denominator = denominator;
 	}
+	
+	public FormattedNumber(FormattedNumber number) {
+		this.numerator = number.numerator;
+		this.denominator = number.denominator;
+		this.slashPosition = number.slashPosition;
+	}
 
 	/** Contructor with a String as parameter. It parses a String with or without a '/' character to symulate a
 	 * fraction or a int number.

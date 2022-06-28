@@ -178,12 +178,12 @@ public class AlgebraMatrix {
 			+"█████████████████████████████████████████████████████████████████████████████████████████████\n");
 
 			System.out.println(" |WARNING|: When calculating determinants of a dimension bigger than 20 you may experience slowness in your computer.");
-			System.out.print(" Type the dimension of the matrix [maximum recommended :20] :");
+			System.out.print(" Type the dimension of the matrix [maximum recommended: 20] :");
 			int dimension = sc.nextInt();
 
 			while (dimension<=0) {
-				System.out.println("\n The matrix dimension can't be less than 0 or bigger than 20.");
-				System.out.printf(" Type the dimension of the matrix [maximum recommended :20] :");
+				System.out.println("\n The matrix dimension can't be less or equal to 0.");
+				System.out.printf(" Type the dimension of the matrix [maximum recommended :20] : ");
 				dimension = sc.nextInt();
 			}
 

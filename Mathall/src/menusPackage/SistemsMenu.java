@@ -10,7 +10,7 @@ import userDataPackage.UserData;
  * which waits for an integer entry that represents the option chosen by the user. In case 
  * that the entry is not correct, the user will be returned to Mathall main menu {@link Mathallmainclass}. 
  * @author Filipondios
- * @version 26.06.2022*/
+ * @version 28.06.2022*/
 public class SistemsMenu {
 
 	Scanner sc = new Scanner(System.in);
@@ -26,8 +26,9 @@ public class SistemsMenu {
 		while (KeepModule) {
 			try {
 				System.out.println(" |EQUATION SYSTEMS RESOLUTION MENU |\n"
-					+" ├─[0]─ Exit menu\n"
-					+" └─[1]─ Resolution of second grade equations\n");
+					+" ├─["+Gr.yellow+"0"+Gr.white+"]─ Exit menu\n"
+					+" ├─["+Gr.yellow+"1"+Gr.white+"]─ Resolution of second grade equations\n"
+					+" └─["+Gr.yellow+"2"+Gr.white+"]─ Resolution of any linear equation system\n");
 				
 				System.out.print(Gr.red+" user"+Gr.white+"@"+UserData.Username+"~# ");int entry = sc.nextInt(); 
 				System.out.println();
@@ -35,6 +36,7 @@ public class SistemsMenu {
 				switch (entry) {
 					case 0:KeepModule=false;break;
 					case 1:Al.SecondGradeEquation();break;
+					case 2:Al.ecuationSystems();break;
 					default:break;
 				}
 			}

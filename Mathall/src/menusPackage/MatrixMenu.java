@@ -26,15 +26,15 @@ public class MatrixMenu {
 		while(KeepModule) {
 			try {
 				System.out.println(" |MATRIX OPERATIONS MENU|\n"
-				+ " ├─[0]─ Exit menu\n"
-				+ " ├─[1]─ Addition or subtraction of any two matrix\n"
-				+ " ├─[2]─ Product of any two matrix\n"
-				+ " ├─[3]─ Power of any matrix\n"
-				+ " ├─[4]─ Determinant of any square matrix\n"
-				+ " ├─[5]─ Rank any matrix\n"
-				+ " ├─[6]─ Row echelon form - Gauss Method of any matrix\n"
-				+ " ├─[7]─ Inverse of any square matrix\n"
-				+ " └─[8]─ Transpose of any matrix\n");
+				+ " ├─["+Gr.yellow+"0"+Gr.white+"]─ Exit menu\n"
+				+ " ├─["+Gr.yellow+"1"+Gr.white+"]─ Addition or subtraction of any two matrix\n"
+				+ " ├─["+Gr.yellow+"2"+Gr.white+"]─ Product of any two matrix\n"
+				+ " ├─["+Gr.yellow+"3"+Gr.white+"]─ Power of any matrix\n"
+				+ " ├─["+Gr.yellow+"4"+Gr.white+"]─ Determinant of any square matrix\n"
+				+ " ├─["+Gr.yellow+"5"+Gr.white+"]─ Rank any matrix\n"
+				+ " ├─["+Gr.yellow+"6"+Gr.white+"]─ Row echelon form - Gauss Method of any matrix\n"
+				+ " ├─["+Gr.yellow+"7"+Gr.white+"]─ Inverse of any square matrix\n"
+				+ " └─["+Gr.yellow+"8"+Gr.white+"]─ Transpose of any matrix\n");
 
 				System.out.print(Gr.red+" user"+Gr.white+"@"+UserData.Username+"~# ");int entry=sc.nextInt(); 
 				System.out.println();

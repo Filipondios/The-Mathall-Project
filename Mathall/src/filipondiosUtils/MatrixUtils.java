@@ -20,7 +20,7 @@ public class MatrixUtils{
 			}System.out.println();
 		}
 	}
-	
+
 	/**Method that prints in console the representation of a matrix.
 	 * @param matrix {@link FormattedNumber} matrix.*/
 	public void printMatrix(FormattedNumber [][] matrix) {
@@ -271,6 +271,7 @@ public class MatrixUtils{
 		//Ensure that the elements of the main diagonal of the matrix are 1. 
 		for (int i = 1; i < extended.length-1; i++) {
 			if (extended[i][i].doubleValue()!=1) {
+				if (extended[i][i].doubleValue() == 0) { cero = true; break;}
 				FormattedNumber temp = extended[i][i];
 				for (int j = i; j < extended[0].length; j++) {
 					extended[i][j] = extended[i][j].division(temp);
@@ -288,6 +289,28 @@ public class MatrixUtils{
 			}
 			return copy;
 		}
+	}
+	
+	/**Method that gets a row of a matrix.
+	 * @param matrix {@link FormattedNumber} matrix.
+	 * @param row Integer number that represents the row to get.
+	 * @return Row of the matrix storaged in a array;*/
+	public FormattedNumber[] getRow(FormattedNumber[][] matrix, int row) {
+		FormattedNumber[] array = new FormattedNumber[matrix[0].length];
+		for (int i = 0; i < matrix[0].length; i++)
+			array[i] = matrix[row][i];
+		return array;
+	}
+	
+	/**Method that gets a column of a matrix.
+	 * @param matrix {@link FormattedNumber} matrix.
+	 * @param row Integer number that represents the column to get.
+	 * @return Column of the matrix storaged in a array;*/
+	public FormattedNumber[] getColumn(FormattedNumber[][] matrix, int column) {
+		FormattedNumber[] array = new FormattedNumber[matrix.length];
+		for (int i = 0; i < matrix.length; i++)
+			array[i] = matrix[i][column];
+		return array;
 	}
 }
 

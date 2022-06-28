@@ -8,7 +8,7 @@ import userDataPackage.UserData;
 
 /**Mathall Main Class. Calls the method that loads the logo and the first menu from {@link Graphics}.
  * @author Filipondios
- * @version 26.06.2022*/
+ * @version 28.06.2022*/
 public class Mathallmainclass {
 
 	public static void main(String[] args) throws Exception, InterruptedException {
@@ -35,12 +35,13 @@ public class Mathallmainclass {
 			catch(InputMismatchException e) {
 				KeepModule = false; RuntimeErrors = true;
 				System.out.println(Gr.red+" Mathall-System."+Gr.white+"output~#: The program ended due some error."
-						+ Gr.red+"\nMathall-System."+Gr.white+"output~#: Check your inputs and make sure it’s not caused by Mathall.");
+						+ Gr.red+"\n Mathall-System."+Gr.white+"output~#: Check your inputs and make sure it’s not caused by Mathall.");
+				Thread.sleep(5*1000);
 			}
 		}
 		if (!RuntimeErrors) {
 			System.out.println(Gr.red+" Mathall-System."+Gr.white+"output~#: The program ended succesfully.");
+			Thread.sleep(2*1000);
 		}
-		Thread.sleep(5*1000);
 	}
 }
