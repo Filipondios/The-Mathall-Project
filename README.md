@@ -12,7 +12,7 @@ At this version, Mathall can do opetations with matrix and resolution of equatio
 that you can do in Mathall 2.2.0:
 
 ### Matrices Utils
-<table alingn="center">
+<table>
   <tr>
     <th>Operations With Matrices</th>
     <th>Matrices properties calculus</th>
@@ -36,7 +36,7 @@ that you can do in Mathall 2.2.0:
 </table>
 
 ### Ecuation/s system/s Utils
-<table alingn="center">
+<table>
   <tr>
     <th>Ecuations solutions</th>
   </tr>
