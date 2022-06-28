@@ -41,7 +41,10 @@ that you can do in Mathall 2.2.0:
     <th>Ecuations solutions</th>
   </tr>
   <tr>
-    <td>Second Grade Ecuations Resolution</td>
+    <td>Second Grade Ecuations Resolution</td>  
+  </tr>
+  <tr> 
+    <td>Linear Ecuation Systems resolution</td>
   </tr>
 </table>
 <br>
