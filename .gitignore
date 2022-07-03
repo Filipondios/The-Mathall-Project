@@ -1,0 +1,5 @@
+# Listado de archivos y carpetas a ignorar
+/bin/
+/Mathall/.settings/
+/Mathall/.classpath
+/Mathall/.project
