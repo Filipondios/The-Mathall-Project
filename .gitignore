@@ -1,5 +1,2 @@
 # Listado de archivos y carpetas a ignorar
-/bin/
-.settings
-.classpath
-.project
+MathallRun.exe
