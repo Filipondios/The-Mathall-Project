@@ -69,7 +69,7 @@ Run the given executable file from the original downloaded project in a terminal
 #### Windows <img align="left" alt="Windows" width="26px" src="https://github.com/devicons/devicon/blob/v2.15.1/icons/windows8/windows8-original.svg" style="padding-right:10px;" />
 
 <pre>
-Just make a double click in the given .exe file (MathallRun.exe) <br><b>OR</b> click the link with icon (Mathall - Its recomended because gives a better look in the Windows terminal).
+Just make a double click in the given .exe file (MathallRun.exe).
 </pre>
 
 <br>
