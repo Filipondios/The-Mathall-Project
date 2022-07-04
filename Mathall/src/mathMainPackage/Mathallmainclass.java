@@ -17,11 +17,18 @@ public class Mathallmainclass {
 		MatrixMenu Mm = new MatrixMenu();
 		SistemsMenu Ms = new SistemsMenu();
 		Graphics Gr = new Graphics();
-
+		
+		int first=0;
 		boolean KeepModule = true, RuntimeErrors=false;
 		while(KeepModule) {
 			try {
 				Gr.ClearConsole(); Gr.GraphicsMenu(); 
+				if (first==0) {
+					System.out.println(Gr.yellow+"\n * "+Gr.green+"NOTE: "+Gr.white+"To select an option of any menu,"
+					+" you have to make a input with the number of the\n"+Gr.yellow+" * "+Gr.white+"desired selection."
+					+" If you type 0 in any menu, you will be returned to the previous menu.\n"+Gr.yellow+" * "+Gr.white
+					+"It will happen the same if your input is not a integer number greater or equal to 0.\n");
+				}
 				System.out.print(Gr.red+" user"+Gr.white+"@"+UserData.Username+"~# "); int input = sc.nextInt();
 				System.out.println();
 				
@@ -31,6 +38,7 @@ public class Mathallmainclass {
 					case 2:Ms.MenuOnSistemas();break; 
 					default:break;
 				}
+				first++;
 			} 
 			catch(InputMismatchException e) {
 				KeepModule = false; RuntimeErrors = true;

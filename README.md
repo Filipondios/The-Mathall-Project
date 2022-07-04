@@ -6,10 +6,10 @@ Due to the short time available and the lack of knowledge, this same program is 
 
 <br>
 
-## What can Mathall 2.2.0 do?
+## What can Mathall 2.2.1 do?
 
 At this version, Mathall can do opetations with matrix and resolution of equations. Here is the list of the exact opetations
-that you can do in Mathall 2.2.0:
+that you can do in Mathall 2.2.1:
 
 ### Matrices Utils
 <table>
@@ -50,7 +50,7 @@ that you can do in Mathall 2.2.0:
 <br>
 
 
-## How to Run Mathall 2.2.0
+## How to Run Mathall 2.2.1
 For both operating systems described below, there is a common way, which is to open the terminal and only run the following command (ALWAYS FROM THE DIRECTORY THAT THE MATHALL PROJECT IS LOCATED):
 
 ```bash
@@ -74,18 +74,18 @@ Just make a double click in the given .exe file (MathallRun.exe) <br><b>OR</b> c
 
 <br>
 
-## Mathall 2.2.0 Preview
+## Mathall 2.2.1 Preview
 ![imagen](https://user-images.githubusercontent.com/91225771/176029340-1082e20c-76e6-4193-9e2c-87e8935c13c8.png)
 
 ## Whats new in Mathall?
 - Row echelon form of any matrix.
 - Inverse of a square matrix.
 - Transpose of any matrix.
+- Inproved understandig of the program for the user.
 - New input system: Fractions will be accepted. At this day, Mathall only accepts integer or fraction numbers. 
 - Domentation is available now in the folder Mathall/doc. To see all documentation in your browser, open index.html.
 
 <br>
 
 ## Whats next in Mathall?
-- Resolution of any equation system.
 - A new package to perform calculations on the euclidean space **(Possibly this update will come in Mathall 3.0.0)**

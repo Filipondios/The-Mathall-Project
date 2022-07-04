@@ -23,6 +23,10 @@ public class AlgebraMatrix {
 			+" ███████████████████████████████████ MATRIX ADDITION-DIFERENCE ███████████████████████████████\n"
 			+" █████████████████████████████████████████████████████████████████████████████████████████████\n");
 
+			System.out.println(Gr.yellow+" * "+Gr.green+"NOTE: "+Gr.white+"To make an addition or difference of two"
+					+" matrices, you have to make a input with two\n"+Gr.yellow+" * "+Gr.white+"matrices with dimensions mxn"
+					+" and mxn "+Gr.red+"("+Gr.blue+"Dimension "+Gr.red+"= "+Gr.blue+"Rows"+Gr.red+"x"+Gr.blue+"Columns"+Gr.red+")"+Gr.white+".\n");
+
 			int m=0,n=0,option=69;
 			System.out.println(" Type the dimensions of both matrix:");
 			System.out.print(" Rows: ");m=sc.nextInt();
@@ -60,7 +64,7 @@ public class AlgebraMatrix {
 						m1[i][j]= m1[i][j].substract(m2[i][j]);
 			}
 			
-			System.out.println("\n The final matrix is :");
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"The final matrix is :");
 			mt.printMatrix(m1);
 			System.out.println("");
 		
@@ -77,7 +81,10 @@ public class AlgebraMatrix {
 			System.out.println("█████████████████████████████████████████████████████████████████████████████████████████████\n"
 			+"████████████████████████████████████████ MATRIX PRODUCT █████████████████████████████████████\n"
 			+"█████████████████████████████████████████████████████████████████████████████████████████████\n");
-			System.out.println();
+
+			System.out.println(Gr.yellow+" * "+Gr.green+"NOTE: "+Gr.white+"To make a product of two matrices,"
+					+" you have to make a input with two matrices\n"+Gr.yellow+" * "+Gr.white+"with dimensions axb"
+					+" and bxc "+Gr.red+"("+Gr.blue+"Dimension "+Gr.red+"= "+Gr.blue+"Rows"+Gr.red+"x"+Gr.blue+"Columns"+Gr.red+")"+Gr.white+".\n");
 
 			int F1,C1,F2,C2;
 			System.out.println(" ¿What dimension do you want for the first matrix?.");
@@ -88,19 +95,19 @@ public class AlgebraMatrix {
 			System.out.print(" Rows: ");F2=sc.nextInt();
 			System.out.print(" Columns: ");C2=sc.nextInt();
 
-			while((F1 <= 0 || C1 <= 0)||(F2 <= 0 || C2 <= 0)||(C1 != F2)) {
+			while((F1 <= 0 || C1 <= 0 ||F2 <= 0 || C2 <= 0)||(C1 != F2)) {
 				if (F1<=0 || C1<=0) {
-					System.out.println(" Type a correct number of rows and colums for the first matrix:");
+					System.out.println("\n Type a correct number of rows and colums for the first matrix:");
 					System.out.print(" Rows: ");F1=sc.nextInt();
 					System.out.print(" Columns: ");C1=sc.nextInt();
 				}
 				if (F2<=0 || C2<=0) {
-					System.out.println(" Type a correct number of rows and colums for the second matrix:");
+					System.out.println("\n Type a correct number of rows and colums for the second matrix:");
 					System.out.print(" Rows: ");F2=sc.nextInt();
 					System.out.print(" Columns: ");C2=sc.nextInt();
 				}
 				if ((C1!=F2)) {
-					System.out.println(" The number of columns of the first matrix and the number of rows of the second can't be different.");
+					System.out.println("\n The number of columns of the first matrix and the number of rows of the second can't be different.");
 					System.out.println(" Type a valid number of rows (for the second) and columns (for the first):");
 					System.out.print(" Rows: ");F2=sc.nextInt();
 					System.out.print(" Columns: ");C1=sc.nextInt();
@@ -116,17 +123,17 @@ public class AlgebraMatrix {
 			System.out.println("\n Formation of the second matrix M for the operation N*M\n");
 			mt.readMatrix(matrix2);
 
-			System.out.println(" The first argumented matrix (N) is:");
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"The first argumented matrix (N) is:");
 			mt.printMatrix(matrix);
 			System.out.println();
 
-			System.out.println(" The second argumented matrix (M) is:");
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"The second argumented matrix (M) is:");
 			mt.printMatrix(matrix2);
 			System.out.println();
 
 			matrix = mt.matrixProduct(matrix,matrix2);
 
-			System.out.println(" The resultant matrix of the product between N and M (N·M):");
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"The resultant matrix of the product between N and M (N·M):");
 			mt.printMatrix(matrix);
 			System.out.println();
 			
@@ -144,6 +151,10 @@ public class AlgebraMatrix {
 			+"████████████████████████████████████████  MATRIX POWER ██████████████████████████████████████\n"
 			+"█████████████████████████████████████████████████████████████████████████████████████████████\n");
 
+			System.out.println(Gr.yellow+" * "+Gr.green+"NOTE: "+Gr.white+"To make the power of a matrix,"
+			+"  you have to make a input with any square matrix\n"+Gr.yellow+" * "+Gr.white+"with dimension nxn."
+			+" "+Gr.red+"("+Gr.blue+"Dimension "+Gr.red+"= "+Gr.blue+"Rows"+Gr.red+"x"+Gr.blue+"Columns"+Gr.red+")"+Gr.white+".\n");
+
 			System.out.print(" Type Rows or Columns (Rows=Columns): ");int longitude=sc.nextInt();
 			System.out.print(" Type the number of the power: ");int power=sc.nextInt();
 			System.out.println();
@@ -153,10 +164,10 @@ public class AlgebraMatrix {
 			
 			mt.readMatrix(matrix);
 
-			System.out.println("\n The initial argumented matrix is:");
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"The initial argumented matrix is:");
 			mt.printMatrix(matrix);
 
-			System.out.println("\n The original matrix powered by "+power+" is: ");
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"The original matrix powered by "+power+" is: ");
 			for (int i=0; i<power-1; i++)
 				matrix = mt.matrixProduct(matrix,matrixIni);
 
@@ -177,8 +188,14 @@ public class AlgebraMatrix {
 			+"██████████████████████████████████████ MATRIX DETERMINANT ███████████████████████████████████\n"
 			+"█████████████████████████████████████████████████████████████████████████████████████████████\n");
 
-			System.out.println(" |WARNING|: When calculating determinants of a dimension bigger than 20 you may experience slowness in your computer.");
-			System.out.print(" Type the dimension of the matrix [maximum recommended: 20] :");
+			System.out.println(Gr.yellow+" * "+Gr.green+"NOTE: "+Gr.white+"To make the power of a matrix,"
+			+"  you have to make a input with any square matrix\n"+Gr.yellow+" * "+Gr.white+"with dimension nxn."
+			+" "+Gr.red+"("+Gr.blue+"Dimension "+Gr.red+"= "+Gr.blue+"Rows"+Gr.red+"x"+Gr.blue+"Columns"+Gr.red+")"+Gr.white+".\n");
+
+			System.out.println(Gr.yellow+" * "+Gr.red+"|WARNING|"+Gr.white+": When calculating determinants of a dimension bigger than 20 you may" 
+			+"experience\n"+Gr.yellow+" * "+Gr.white+"slowness in your computer.");
+			
+			System.out.print("\n Type the dimension of the matrix [maximum recommended: 20] :");
 			int dimension = sc.nextInt();
 
 			while (dimension<=0) {
@@ -192,10 +209,10 @@ public class AlgebraMatrix {
 			System.out.printf("\n Type the elements of the matrix:\n\n");
 			mt.readMatrix(matrix);
 
-			System.out.printf("\n This is your argumented matrix of dimension "+dimension+":\n");
+			System.out.printf(Gr.yellow+"\n * "+Gr.white+"This is your argumented matrix of dimension "+dimension+":\n");
 			mt.printMatrix(matrix);
 
-			System.out.println("\n The determinant of the matrix is: "+ mt.determinant(matrix));
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"The determinant of the matrix is: "+ mt.determinant(matrix));
 			System.out.println();
 		
 		}catch (InputMismatchException | NumberFormatException e) {
@@ -228,9 +245,9 @@ public class AlgebraMatrix {
 			System.out.print("\n");
 			mt.readMatrix(matrix);
 
-			System.out.println(" Your argumented matrix is:");
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"Your argumented matrix is:");
 			mt.printMatrix(matrix);
-			System.out.println("\n The rank of the given matrix is: "+mt.matrixRank(matrix)+"\n");
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"The rank of the given matrix is: "+mt.matrixRank(matrix)+"\n");
 					
 		}catch (InputMismatchException | NumberFormatException e) {
 			sc.nextLine();
@@ -261,10 +278,10 @@ public class AlgebraMatrix {
 			System.out.print("\n");
 			mt.readMatrix(matrix);
 
-			System.out.println(" Your argumented matrix is:");
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"Your argumented matrix is:");
 			mt.printMatrix(matrix);
 			
-			System.out.println("\n The transpose of the original matrix is:");
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"The transpose of the original matrix is:");
 			FormattedNumber[][] transpose  = mt.transposeOf(matrix);
 			mt.printMatrix(transpose);
 			System.out.println();
@@ -299,10 +316,10 @@ public class AlgebraMatrix {
 			System.out.print("\n");
 			mt.readMatrix(matrix);
 
-			System.out.println(" Your argumented matrix is:");
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"Your argumented matrix is:");
 			mt.printMatrix(matrix);
 			
-			System.out.println("\n The row echelon form of the original matrix is:");
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"The row echelon form of the original matrix is:");
 			mt.gaussMethod(matrix);
 			mt.printMatrix(matrix);
 			System.out.println();
@@ -321,6 +338,13 @@ public class AlgebraMatrix {
 			+"█████████████████████████████████████ INVERSE OF A MATRIX ███████████████████████████████████\n"
 			+"█████████████████████████████████████████████████████████████████████████████████████████████\n");
 
+			System.out.println(Gr.yellow+" * "+Gr.green+"NOTE: "+Gr.white+"To calculate the inverse of a matrix,"
+			+"  you have to make a input with any square matrix\n"+Gr.yellow+" * "+Gr.white+"with dimension nxn."
+			+" "+Gr.red+"("+Gr.blue+"Dimension "+Gr.red+"= "+Gr.blue+"Rows"+Gr.red+"x"+Gr.blue+"Columns"+Gr.red+")"+Gr.white+".\n");
+
+			System.out.println(Gr.yellow+" * "+Gr.red+"|WARNING|"+Gr.white+": When the matrix dimension is bigger than 20 you may" 
+			+"experience\n"+Gr.yellow+" * "+Gr.white+"slowness in your computer.\n");
+
 			int D=0;
 			System.out.print(" Type the dimension of the matrix: "); D=sc.nextInt();
 
@@ -333,15 +357,15 @@ public class AlgebraMatrix {
 			System.out.print("\n");
 			mt.readMatrix(matrix);
 
-			System.out.println(" Your argumented matrix is:");
+			System.out.println(Gr.yellow+"\n * "+Gr.white+"Your argumented matrix is:");
 			mt.printMatrix(matrix);
 			
 			try {
 				FormattedNumber[][] inverse = mt.inverseMatrixOf(matrix);
-				System.out.println("\n The inverse of the original matrix is:");
+				System.out.println(Gr.yellow+"\n * "+Gr.white+"The inverse of the original matrix is:");
 				mt.printMatrix(inverse);
 			} catch (Exception e) {
-				System.out.println(" There is no inverse for the matrix :(");
+				System.out.println(Gr.yellow+"\n * "+Gr.white+"There is no inverse for the matrix :(");
 			}
 			System.out.println();
 			

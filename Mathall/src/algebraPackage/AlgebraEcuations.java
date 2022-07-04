@@ -4,7 +4,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import filipondiosUtils.FormattedNumber;
 import filipondiosUtils.MatrixUtils;
-import java.io.IOException;
 import graphicsPackage.Graphics;
 import menusPackage.SistemsMenu;
 
@@ -88,11 +87,12 @@ public class AlgebraEcuations {
 					+ "███████████████████████████ LINEAR ECUATION SYSTEMS RESOLUTION ██████████████████████████████\n"
 					+ "█████████████████████████████████████████████████████████████████████████████████████████████\n");			
 
-			System.out.println(" For Mathall, a linear ecuation system consists on n ecuations with n variables. "
-					+ "\n For example, a 3 ecuations system with 3 variables looks like:\n"
-					+ "\n  | ax + by +cz = d\n -| a'x + b'y +c'z = d'\n  | a''x + b''y +c''z = d''\n\n Where a,b,c,d and others are constants"
-					+ " (numbers) and x,y,z are variables.");
-			System.out.print(" Now, type the number of ecuations and variables: ");
+			System.out.println(Gr.yellow+" * "+Gr.green+"NOTE:"+Gr.white+" For Mathall, a linear ecuation system consists on n ecuations with n variables. "
+					+ Gr.yellow+"\n * "+Gr.white+"For example, a 3 ecuations system with 3 variables looks like:\n"+Gr.yellow+" *"
+					+ "\n * "+Gr.white+" | ax + by +cz = d\n"+Gr.yellow+" * "+Gr.white+"-| a'x + b'y +c'z = d'\n"+Gr.yellow+" * "+Gr.white+" | a''x + b''y +c''z = d''\n"+Gr.yellow+" *"
+					+ Gr.yellow+"\n * "+Gr.green+"NOTE:"+Gr.white+ "a,b,c are constants (numbers) and x,y,z are variables.");
+			
+			System.out.print("\n Now, type the number of ecuations and variables: ");
 			int Dimension = sc.nextInt();
 			System.out.println("\n Type the ecuation system data:\n");
 

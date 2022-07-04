@@ -24,6 +24,9 @@ public class Graphics {
 	/**Object of type {@link String} that storages a token wich changes the output's
 	 * color that comes out after in the console into yellow.*/
 	public String yellow="\u001B[33m";
+	/**Object of type {@link String} that storages a token wich changes the output's
+	 * color that comes out after in the console into yellow.*/
+	public String blue="\033[0;34m";
 	UserData data= new UserData();
 	
 	/**Method that prints Mathall's logo and first menu.*/
