@@ -77,13 +77,11 @@ Just make a double click in the given .exe file (MathallRun.exe) <br><b>OR</b> c
 ## Mathall 2.2.1 Preview
 ![imagen](https://user-images.githubusercontent.com/91225771/177181814-a77dbedc-64bf-491c-a513-813ac8feff30.png)
 
+<b>Depending of the terminal or the OS, Mathall won't look the same as the photo (It never would be). This picture was taken in a ArchLinux terminal 
+with a transparency effect, so the wallpaper is visible and makes Mathall more beautiful than  it is.</b>
+  
 ## Whats new in Mathall?
-- Row echelon form of any matrix.
-- Inverse of a square matrix.
-- Transpose of any matrix.
 - Inproved understandig of the program for the user.
-- New input system: Fractions will be accepted. At this day, Mathall only accepts integer or fraction numbers. 
-- Domentation is available now in the folder Mathall/doc. To see all documentation in your browser, open index.html.
 
 <br>
 
