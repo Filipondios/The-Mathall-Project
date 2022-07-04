@@ -75,7 +75,7 @@ Just make a double click in the given .exe file (MathallRun.exe) <br><b>OR</b> c
 <br>
 
 ## Mathall 2.2.1 Preview
-![imagen](https://user-images.githubusercontent.com/91225771/176029340-1082e20c-76e6-4193-9e2c-87e8935c13c8.png)
+![imagen](https://user-images.githubusercontent.com/91225771/177181814-a77dbedc-64bf-491c-a513-813ac8feff30.png)
 
 ## Whats new in Mathall?
 - Row echelon form of any matrix.
