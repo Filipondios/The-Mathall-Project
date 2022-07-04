@@ -154,9 +154,9 @@ public class AlgebraEcuations {
 					if (i!=solutions.length-1) { System.out.print(solutions[i]+", "); }
 					else System.out.print(solutions[i]+")\n");
 				}
-				System.out.println(Gr.red+"\n NOTE:"+Gr.white+"The solutions are written in the next format: If you have a"
-						+ "\n system with 2 variables, the solution will be (x,y), if you have a 3\n"
-						+ " variables system, the solution will be (x,y,z) and so on...\n");
+				System.out.println(Gr.yellow+"\n * "+Gr.green+"NOTE:"+Gr.white+"The solutions are written in the next format: If you have a"
+						+ Gr.yellow+"\n * "+Gr.white+"system with 2 variables, the solution will be (x,y), if you have a 3\n"
+						+ Gr.yellow+" * "+Gr.white+"variables system, the solution will be (x,y,z) and so on...\n");
 			}
 			
 		}catch (InputMismatchException e) {
