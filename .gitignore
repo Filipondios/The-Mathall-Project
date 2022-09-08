@@ -1,1 +1,10 @@
+#Eclipse settings
+/Mathall/.classpath
+/Mathall/.project
+
+#VSCode settings
+/.vs/
+
+# General Bin
 /Mathall/bin/
+
