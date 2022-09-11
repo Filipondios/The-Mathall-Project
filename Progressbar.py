@@ -46,6 +46,5 @@ def mainProgressBar(gapTime, ProgressTitle, ProgressDescription):
 
 
 # Actual printable progress Bars
-mainProgressBar(0.01,'Progress','Processing Data')
-
-
+mainProgressBar(0.01,'Init:','Processing Data')
+mainProgressBar(0.02,'Init:','Initializing Applicattion')
