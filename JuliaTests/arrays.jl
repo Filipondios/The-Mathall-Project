@@ -15,5 +15,13 @@ arr = Int64[] # arr = String[]
 matrix = [1 2 3 4 5 6 7 8 9 10] # This is a 1x10 matrix
 # Add another row with the semicolon
 matrix = [1 2 3 4 5 ; 6 7 8 9 10] # This is a 2x5 matrix
-
+# Creating an array using range objects with the collect() function
+arr = collect(1:5) # eq. [1,2,3,4,5]
+# Creating an array using range objects with the collect() function
+arr = collect(1.5:5.5) # eq. [1.5,2.5,3.5,4.5,5.5]
+# Creating arrays with other collect() implementation
+# The implementation is start:step:stop
+arr = collect(0:5:50) # eq. [0,5,10,15,..,50]
+# Creating an array with the elipsis operator (...)
+arr = [0:10...] # eq. [1,2,3,4,5,...,9,10]
 
