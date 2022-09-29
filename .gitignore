@@ -1,6 +1,7 @@
 #Eclipse settings
 /Mathall/.classpath
 /Mathall/.project
+/Mathall/.settings/
 
 #VSCode settings
 /.vs/
