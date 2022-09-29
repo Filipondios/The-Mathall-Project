@@ -52,3 +52,29 @@ arr = fill(100,5) # eq. [100,100,100,100,100]
 matrix = fill(69,3,3) #eq. a matrix full of 69 values
 # Override an array with a specific value
 fill!(matrix,69)
+# Array of arrays
+arr = Array[[3,4],[5,6]]
+# Make a matrix with other arrays
+matrix = [[3,4] [5,6]] # eq a 2x2 matrix
+# Array of arrays with the ":" notation
+Array[1:5,6:10]
+# Copy an array. Only copies the dimension, not elements.
+arr = similar(A) # A is another array
+
+# Accessing to an array position. Array positions go from
+# 1 to n, knowing that the array has n positions.
+arr[4] # Get the 4th value.
+# Access to the last element of an array
+arr[end]
+# Access to multiple elements by their indexes
+arr[[2,5,6]] # access to elements 2,5 and 6
+# Access to multiple elements by typing true or false
+arr[[true,true, false, false]] # access to positions 1,2
+# Access to a matrix position with one coordinate.
+# matrix[1] is the 1row - 1col element. matrix[2] will be the
+# 2row - 1col element and so.
+matrix[1]
+# Access to a matrix position with two coordinates.
+matrix[1,2] # gets the 1row - 2col element
+# Access to a matrix position with two coordinates and the matrix
+getindex(arr2,1,2)
