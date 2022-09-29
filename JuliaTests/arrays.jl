@@ -78,3 +78,16 @@ matrix[1]
 matrix[1,2] # gets the 1row - 2col element
 # Access to a matrix position with two coordinates and the matrix
 getindex(arr2,1,2)
+
+# Add an element at the end of and array
+push!(arr,55) # add 55 to the end of arr
+# Add an element at the front of an array 
+pushfirst!(arr,0)
+# Add an element at a given index
+splice!(arr,2,4) # Add 4 at position 2
+# Add multiple elements at multiple positions of an array
+# If there are more elements to add than positions available in the
+# array, the array increases its position number.
+splice!(arr,2:5,2:6)
+
+
