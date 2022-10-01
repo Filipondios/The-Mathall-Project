@@ -6,7 +6,7 @@ package userDataPackage;
  * @version 26.06.2022*/
 public class UserData {
 	/**String object that storages the actual username of the user's machine.*/
-    public static String Username = System.getProperty("user.name");
+    public static final String Username = System.getProperty("user.name");
     /**String object that storages the OS name of the user's machine.*/
-    public String OS = (System.getProperty("os.name").contains("Windows")) ? "Windows" : "Linux/MacOS";
+    public static final String OS = (System.getProperty("os.name").contains("Windows")) ? "Windows" : "Linux/MacOS";
 }
