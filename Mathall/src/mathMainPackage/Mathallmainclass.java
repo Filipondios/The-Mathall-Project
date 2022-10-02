@@ -16,7 +16,6 @@ public class Mathallmainclass {
 		@SuppressWarnings("resource") Scanner sc = new Scanner(System.in);
 		MatrixMenu Mm = new MatrixMenu();
 		SistemsMenu Ms = new SistemsMenu();
-		Graphics.setCodepage();
 		
 		boolean KeepModule = true, first = true, RuntimeErrors=false;
 		while(KeepModule) {
@@ -53,10 +52,10 @@ public class Mathallmainclass {
 	
 	/**Method that prints Mathall's logo and first menu.*/
     public static void GraphicsMenu() {
-        System.out.println(Graphics.white+" |MATHALL MAIN MENU"+Graphics.purple+"                    __  __       _   _           _ _ ");
+        System.out.println(Graphics.white+" |MATHALL MAIN MENU"+Graphics.purple+"                       __  __       _   _           _ _ ");
         System.out.println(Graphics.white+" ├─["+Graphics.yellow+"0"+Graphics.white+"]─ Exit Mathall"+Graphics.purple+"                     |  \\/  | __ _| |_| |__   __ _| | |");
         System.out.println(Graphics.white+" ├─["+Graphics.yellow+"1"+Graphics.white+"]─ Matrix Operations"+Graphics.purple+"                | |\\/| |/ _` | __| '_ \\ / _` | | |");
         System.out.println(Graphics.white+" └─["+Graphics.yellow+"2"+Graphics.white+"]─ Equation Systems Resolution"+Graphics.purple+"      | |  | | (_| | |_| | | | (_| | | |");
-        System.out.println("                                      "+Graphics.purple+"|_|  |_|\\__,_|\\__|_| |_|\\__,_|_|_| @2.2.1");
+        System.out.println("                                         "+Graphics.purple+"|_|  |_|\\__,_|\\__|_| |_|\\__,_|_|_| @2.2.1");
     }
 }
