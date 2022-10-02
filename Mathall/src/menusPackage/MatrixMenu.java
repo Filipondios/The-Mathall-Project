@@ -3,19 +3,17 @@ package menusPackage;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import algebraPackage.AlgebraMatrix;
-import graphicsPackage.Graphics;
+import filipondiosUtils.Print;
 import mathMainPackage.Mathallmainclass;
-import userDataPackage.UserData;
 
 /**Class that allows the user the selection of the operations with matrices. This loads a menu,
  * which waits for an integer entry that represents the option chosen by the user. In case 
  * that the entry is not correct, the user will be returned to Mathall main menu {@link Mathallmainclass}. 
  * @author Filipondios
- * @version 27.06.2022*/
+ * @version 01.10.2022*/
 public class MatrixMenu {
-	Scanner sc=new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
 	AlgebraMatrix Al = new AlgebraMatrix();
-	Graphics Gr = new Graphics();
 	
 	/**Method that prints in console the matrix operations selection menu and 
 	 * depending on the user's choice, a determinated method of the class {@link AlgebraMatrix}
@@ -25,18 +23,18 @@ public class MatrixMenu {
 		
 		while(KeepModule) {
 			try {
-				System.out.println(" |MATRIX OPERATIONS MENU|\n"
-				+ " ├─["+Gr.yellow+"0"+Gr.white+"]─ Exit menu\n"
-				+ " ├─["+Gr.yellow+"1"+Gr.white+"]─ Addition or subtraction of any two matrix\n"
-				+ " ├─["+Gr.yellow+"2"+Gr.white+"]─ Product of any two matrix\n"
-				+ " ├─["+Gr.yellow+"3"+Gr.white+"]─ Power of any matrix\n"
-				+ " ├─["+Gr.yellow+"4"+Gr.white+"]─ Determinant of any square matrix\n"
-				+ " ├─["+Gr.yellow+"5"+Gr.white+"]─ Rank any matrix\n"
-				+ " ├─["+Gr.yellow+"6"+Gr.white+"]─ Row echelon form - Gauss Method of any matrix\n"
-				+ " ├─["+Gr.yellow+"7"+Gr.white+"]─ Inverse of any square matrix\n"
-				+ " └─["+Gr.yellow+"8"+Gr.white+"]─ Transpose of any matrix\n");
+			    Print.menu("MATRIX OPERATIONS MENU", 
+			            "Exit menu",
+			            "Addition or subtraction of any two matrix",
+			            "Product of any two matrix",
+			            "Power of any matrix",
+			            "Determinant of any square matrix",
+			            "Rank any matrix",
+			            "Row echelon form - Gauss Method of any matrix",
+			            "Inverse of any square matrix",
+			            "Transpose of any matrix");
 
-				System.out.print(Gr.red+" user"+Gr.white+"@"+UserData.Username+"~# ");int entry=sc.nextInt(); 
+				Print.prompt(); int entry=sc.nextInt(); 
 				System.out.println();
 
 				switch (entry) {
@@ -55,7 +53,7 @@ public class MatrixMenu {
 			catch(InputMismatchException e) {
 				sc.nextLine(); 
 				KeepModule=false;
-				System.out.println(Gr.red+" Mathall-System."+Gr.white+"output~#: Check your input: its not accepted.\n");
+				Print.warning("Check your input: its not accepted\n\n");
 			}
 		}
 	}
