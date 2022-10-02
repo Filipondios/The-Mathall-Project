@@ -17,24 +17,17 @@ public class AlgebraMatrix {
 	
 	/**Method that calculates the addition or the substraction of two matrices given by the user's inputs.*/
 	public void MatrixAddSub() {
-		Gr.ClearConsole();
+		Graphics.ClearConsole();
 		try {
-			System.out.println(" █████████████████████████████████████████████████████████████████████████████████████████████\n"
-			+" ███████████████████████████████████ MATRIX ADDITION-DIFERENCE ███████████████████████████████\n"
-			+" █████████████████████████████████████████████████████████████████████████████████████████████\n");
-
-			System.out.println(Gr.yellow+" * "+Gr.green+"NOTE: "+Gr.white+"To make an addition or difference of two"
-					+" matrices, you have to make a input with two\n"+Gr.yellow+" * "+Gr.white+"matrices with dimensions mxn"
-					+" and mxn "+Gr.red+"("+Gr.blue+"Dimension "+Gr.red+"= "+Gr.blue+"Rows"+Gr.red+"x"+Gr.blue+"Columns"+Gr.red+")"+Gr.white+".\n");
-
-			int m=0,n=0,option=69;
-			System.out.println(" Type the dimensions of both matrix:");
-			System.out.print(" Rows: ");m=sc.nextInt();
-			System.out.print(" Columns: ");n=sc.nextInt();
+		    Print.note("To make an addition or difference of two matrices, you have to make a input with two"
+		            + "matrices with dimensions mxn and mxn (Dimension = RowsxColumns).");
+		    
+			int m = 0, n = 0, option = 69;
+			System.out.println("\n Type the dimensions of both matrix:");
+			System.out.print(" Rows: "); m=sc.nextInt();
+			System.out.print(" Columns: "); n=sc.nextInt();
 			
-			System.out.println();
-
-			System.out.println("\t\t\t TYPE THE ELEMENTS OF THE FIRST MATRIX:\n");
+			System.out.println("\n\t\t\t TYPE THE ELEMENTS OF THE FIRST MATRIX:\n");
 			FormattedNumber[][] m1 = new FormattedNumber[m][n];
 			mt.readMatrix(m1);
 
@@ -42,15 +35,20 @@ public class AlgebraMatrix {
 			FormattedNumber[][] m2 = new FormattedNumber[m][n];
 			mt.readMatrix(m2);
 
-			System.out.println("\n Choose the operation to do [0/1]");
-			System.out.println(" #0- Addition of Matrix1 and Matrix2");
-			System.out.println(" #1- Diference between Matrix2 and Matrix1 [Matrix2-Matrix1]");option=sc.nextInt();
+			Print.menu("Choose the operation to do [0/1]",
+			        "Addition of Matrix1 and Matrix2",
+			        "Diference between Matrix2 and Matrix1 [Matrix2-Matrix1]");
+			Print.prompt();
+			option = sc.nextInt();
 
 			while (option!=0 && option!=1){
-				System.out.println("\n Not valid input: Type 0 o 1.");
-				System.out.println("\n Choose the operation to do [0/1]");
-				System.out.println(" #0- Addition of Matrix1 and Matrix2.");
-				System.out.println(" #1- Diference between Matrix1 and Matrix2 (Matrix1-Matrix2).");option=sc.nextInt();
+			    Print.warning("Not valid input: Type 0 o 1.");
+			    
+			    Print.menu("Choose the operation to do [0/1]",
+	                    "Addition of Matrix1 and Matrix2",
+	                    "Diference between Matrix2 and Matrix1 [Matrix2-Matrix1]");
+	            Print.prompt();
+	            option = sc.nextInt();
 			}
 			
 			if (option==0) {
@@ -64,13 +62,13 @@ public class AlgebraMatrix {
 						m1[i][j]= m1[i][j].substract(m2[i][j]);
 			}
 			
-			System.out.println(Gr.yellow+"\n * "+Gr.white+"The final matrix is :");
+			Print.result("The final matrix is:");
 			mt.printMatrix(m1);
 			System.out.println("");
 		
 		}catch (InputMismatchException | NumberFormatException e) {
 			sc.nextLine();
-			System.out.println(Gr.red+" Mathall-System."+Gr.white+"output~#: Check your input: its not accepted.\n");
+			Print.warning("Check your input: its not accepted.\n");
 		}
 	}
 	
