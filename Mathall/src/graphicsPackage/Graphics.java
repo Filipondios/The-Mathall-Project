@@ -43,14 +43,4 @@ public class Graphics {
 			}
 		} catch (Exception e) {/*Do nothing*/}
 	}
-	
-	/**Method that is called ONLY if the user's SO is Windows, and sets the codepage to CHCP 65001.
-	 * This is because there are special characters that needs te be printed in console and with the
-	 * default Windows codepage its not possible to represent them.*/
-	public static void setCodepage() {
-		try {
-			if (UserData.OS.equals("Windows"))
-				new ProcessBuilder("cmd", "/c", "CHCP 65001").inheritIO().start().waitFor();
-		} catch (Exception e) {/*Do nothing*/}
-	}
 }
