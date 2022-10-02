@@ -5,44 +5,22 @@ The Mathall proyect is organized like this:
 -> src ( Code )
 	-> aboutMathall
 		-> structure.txt (This file)
-	-> mathMainPackage
-		-> Mathallmainpackage.java
 	-> algebraPackage
 		-> AlgebraMatrices.java
 		-> AlgebraEcuaciones.java
-	-> formatPackage
-		-> Fraccion.java
-		-> Line.java
-		-> Vector.java
+	-> filipondiosUtils
+		-> FormattedNumber.java
+		-> MatrixUtils.java
+		-> Print.java
+	-> graphicsPackage
+		-> Graphics.java
+	-> mathMainPackage
+		-> Mathallmainpackage.java
 	-> menusPackage
 		-> MatricesMenu.java
 		-> SistemasMenu.java
-	-> graphicsPackage
-		-> Graphics.java
 	-> userDataPackage
 		-> UserData.java
 		
 -> dist (Mathall .jar executable)
-	-> Mathall.jar
-	
--> doc ( Documentation )
-
--> uml ( Graphic representation of the src java clases)
-	-> mathMainPackage
-		-> Mathallmainpackage.cld
-	-> algebraPackage
-		-> AlgebraMatrices.cld
-		-> AlgebraEcuaciones.cld
-	-> formatPackage
-		-> Fraccion.cld
-		-> Line.cld
-		-> Vector.cld
-	-> menusPackage
-		-> MatricesMenu.cld
-		-> SistemasMenu.cld
-	-> graphicsPackage
-		-> Graphics.cld
-	-> userDataPackage
-		-> UserData.cld
-
-		
+	-> Mathall.jar		
