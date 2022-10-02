@@ -42,7 +42,7 @@ public class AlgebraMatrix {
 			option = sc.nextInt();
 
 			while (option!=0 && option!=1){
-			    Print.warning("Not valid input: Type 0 o 1.");
+			    Print.warning("Not valid input: Type 0 o 1.\n");
 			    
 			    Print.menu("Choose the operation to do [0/1]",
 	                    "Addition of Matrix1 and Matrix2",
@@ -64,7 +64,7 @@ public class AlgebraMatrix {
 			
 			Print.result("The final matrix is:");
 			mt.printMatrix(m1);
-			System.out.println("");
+			System.out.println();
 		
 		}catch (InputMismatchException | NumberFormatException e) {
 			sc.nextLine();
