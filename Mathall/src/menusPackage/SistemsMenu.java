@@ -3,19 +3,17 @@ package menusPackage;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import algebraPackage.AlgebraEcuations;
-import graphicsPackage.Graphics;
+import filipondiosUtils.Print;
 import mathMainPackage.Mathallmainclass;
-import userDataPackage.UserData;
 /**Class that allows the user the selection of the resolution of ecuation systems. This loads a menu,
  * which waits for an integer entry that represents the option chosen by the user. In case 
  * that the entry is not correct, the user will be returned to Mathall main menu {@link Mathallmainclass}. 
  * @author Filipondios
- * @version 28.06.2022*/
+ * @version 01.10.2022*/
 public class SistemsMenu {
 
 	Scanner sc = new Scanner(System.in);
 	AlgebraEcuations Al = new AlgebraEcuations();
-	Graphics Gr = new Graphics();
 	
 	/**Method that prints in console the ecuation systems resolution selection menu and 
 	 * depending on the user's choice, a determinated method of the class {@link AlgebraEcuations}
@@ -25,12 +23,12 @@ public class SistemsMenu {
 
 		while (KeepModule) {
 			try {
-				System.out.println(" |EQUATION SYSTEMS RESOLUTION MENU |\n"
-					+" ├─["+Gr.yellow+"0"+Gr.white+"]─ Exit menu\n"
-					+" ├─["+Gr.yellow+"1"+Gr.white+"]─ Resolution of second grade equations\n"
-					+" └─["+Gr.yellow+"2"+Gr.white+"]─ Resolution of any linear equation system\n");
+			    Print.menu("EQUATION SYSTEMS RESOLUTION MENU",
+			            "Exit menu",
+			            "Resolution of second grade equations",
+			            "Resolution of any linear equation system");
 				
-				System.out.print(Gr.red+" user"+Gr.white+"@"+UserData.Username+"~# ");int entry = sc.nextInt(); 
+				Print.prompt(); int entry = sc.nextInt(); 
 				System.out.println();
 
 				switch (entry) {
@@ -43,7 +41,7 @@ public class SistemsMenu {
 			catch(InputMismatchException e) {
 				sc.nextLine(); 
 				KeepModule = false;
-				System.out.println(Gr.red+" Mathall-System."+Gr.white+"output~#: Check your input: its not accepted.\n");
+				Print.warning("Check your input: its not accepted\n\n");
 			}
 		}
 	}
