@@ -13,17 +13,21 @@ public class Print {
      * @param message String that represents the message to post as a note.*/
     public static void note(final String message){
         String[] arr = message.split(" ");
+		String term = " ";
+        
+		int chars = 9; System.out.print("\n "+Graphics.yellow+"* "+Graphics.green+"NOTE : "+Graphics.white);
 		
-		int chars = 9; System.out.print("\n "+Graphics.yellow+"* "+Graphics.green+"NOTE :"+Graphics.white);
-		for (String str : arr) {
-			if (str.length()+chars+1<94) {
-				System.out.print(str+" ");
-				chars+=str.length()+1;
-				continue;
-			}
-			System.out.print(Graphics.yellow+"\n * "+Graphics.white+str+" ");
-			chars=str.length()+4;
-		}
+		for (int i = 0; i < arr.length; i++) {
+            if (i==arr.length-1) term = "\n";
+            
+            if (arr[i].length()+chars+1<94) {
+                System.out.print(arr[i]+term);
+                chars+=arr[i].length()+1;
+                continue;
+            }
+            System.out.print(Graphics.yellow+"\n * "+Graphics.white+arr[i]+term);
+            chars=arr[i].length()+4;
+        }
     }
     
     /**Method that prints a warning message in the console. Each note line must have 94
@@ -31,26 +35,49 @@ public class Print {
      * @param message String that represents the message to post as a warning.*/
     public static void warning(final String message) {
         String[] arr = message.split(" ");
+        String term = " ";
         
         int chars = 11; System.out.print("\n "+Graphics.red+"WARNING : "+Graphics.white);
-        for (String str : arr) {
-            if (str.length()+chars+1<94) {
-                System.out.print(str+" ");
-                chars+=str.length()+1;
+        
+        for (int i = 0; i < arr.length; i++) {
+            if (i==arr.length-1) term = "\n";
+            
+            if (arr[i].length()+chars+1<94) {
+                System.out.print(arr[i]+term);
+                chars+=arr[i].length()+1;
                 continue;
             }
-            System.out.print("\n "+str+" ");
-            chars=str.length()+2;
+            System.out.print("\n "+arr[i]+term);
+            chars=arr[i].length()+2;
         }
     }
     
     /** Method that creates a menu based in the parameters.
      * @param options Group of parameters storaged in a String array.**/
-    public static void menu(String ... options) {
+    public static void menu(String ... options) {        
         for (int i = 0; i < options.length; i++) {
            if(i==0) System.out.println(" |"+options[i]);
-           else if(i<options.length-1) System.out.println(" ├─["+i+"]- "+options[i]);
-           else System.out.println(" └─["+i+"]- "+options[i]);
+           else if(i<options.length-1) System.out.println(" ├─["+Graphics.yellow+(i-1)+Graphics.white+"]- "+options[i]);
+           else System.out.println(" └─["+Graphics.yellow+(i-1)+Graphics.white+"]- "+options[i]);
+        }
+    }
+    
+    public static void result(String message) {
+        String[] arr = message.split(" ");
+        String term = " ";
+        
+        int chars = 9; System.out.print("\n "+Graphics.yellow+"* RESULT : "+Graphics.white);
+        
+        for (int i = 0; i < arr.length; i++) {
+            if (i==arr.length-1) term = "\n";
+            
+            if (arr[i].length()+chars+1<94) {
+                System.out.print(arr[i]+term);
+                chars+=arr[i].length()+1;
+                continue;
+            }
+            System.out.print(Graphics.yellow+"\n * "+Graphics.white+arr[i]+term);
+            chars=arr[i].length()+4;
         }
     }
     
@@ -58,6 +85,6 @@ public class Print {
      * parts of it. Be aware that you must let a space before the string that represents the prompt
      * because all the program outputs has it.*/
     public static void prompt() {
-        System.out.print(Graphics.red+" user"+Graphics.white+"@"+UserData.Username+"~# ");
+        System.out.print(Graphics.red+"\n user"+Graphics.white+"@"+UserData.Username+"~# ");
     }
 }
