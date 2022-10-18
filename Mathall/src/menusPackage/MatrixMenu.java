@@ -4,13 +4,14 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import algebraPackage.AlgebraMatrix;
 import filipondiosUtils.Print;
+import graphicsPackage.Graphics;
 import mathMainPackage.Mathallmainclass;
 
 /**Class that allows the user the selection of the operations with matrices. This loads a menu,
  * which waits for an integer entry that represents the option chosen by the user. In case 
  * that the entry is not correct, the user will be returned to Mathall main menu {@link Mathallmainclass}. 
  * @author Filipondios
- * @version 01.10.2022*/
+ * @version 18.10.2022*/
 public class MatrixMenu {
 	Scanner sc = new Scanner(System.in);
 	AlgebraMatrix Al = new AlgebraMatrix();
@@ -35,7 +36,7 @@ public class MatrixMenu {
 			            "Transpose of any matrix");
 
 				Print.prompt(); int entry=sc.nextInt(); 
-				System.out.println();
+				Graphics.ClearConsole();
 
 				switch (entry) {
 					case 0:KeepModule=false;break;
