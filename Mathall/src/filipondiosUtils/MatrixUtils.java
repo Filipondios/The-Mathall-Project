@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**Class that implements several methods that allow two different transformations
  * and operations to matrices.
  * @author Filipondios
- * @version 27.06.2022*/
+ * @version 18.10.2022*/
 public class MatrixUtils{
 	Scanner sc =new Scanner(System.in);
 	FormattedNumber fn = new FormattedNumber();
@@ -278,7 +278,7 @@ public class MatrixUtils{
 				}
 			}
 		}
-		if (cero) { throw new Exception("There is no inverse for the matrix :(");}
+		if (cero) { throw new NoInverseMatrixExists("There is no inverse for the matrix :(");}
 		else {
 			//Copy the right part of the extended matrix
 			FormattedNumber[][] copy = new FormattedNumber[matrix.length][matrix[0].length];
