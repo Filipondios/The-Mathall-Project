@@ -8,7 +8,7 @@ import menusPackage.*;
 
 /**Mathall Main Class. Calls the method that loads the logo and the first menu from {@link Graphics}.
  * @author Filipondios
- * @version 01.10.2022*/
+ * @version 19.10.2022*/
 public class Mathallmainclass {
 
 	public static void main(String[] args) throws Exception, InterruptedException {
@@ -56,6 +56,6 @@ public class Mathallmainclass {
         System.out.println(Graphics.white+" ├─["+Graphics.yellow+"0"+Graphics.white+"]─ Exit Mathall"+Graphics.purple+"                     |  \\/  | __ _| |_| |__   __ _| | |");
         System.out.println(Graphics.white+" ├─["+Graphics.yellow+"1"+Graphics.white+"]─ Matrix Operations"+Graphics.purple+"                | |\\/| |/ _` | __| '_ \\ / _` | | |");
         System.out.println(Graphics.white+" └─["+Graphics.yellow+"2"+Graphics.white+"]─ Equation Systems Resolution"+Graphics.purple+"      | |  | | (_| | |_| | | | (_| | | |");
-        System.out.println("                                         "+Graphics.purple+"|_|  |_|\\__,_|\\__|_| |_|\\__,_|_|_| @2.2.1");
+        System.out.println("                                         "+Graphics.purple+"|_|  |_|\\__,_|\\__|_| |_|\\__,_|_|_| @2.5.0");
     }
 }
