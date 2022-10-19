@@ -75,10 +75,9 @@ Just make a double click in the given .exe file (MathallRun.exe).
 <br>
 
 ## Mathall 2.5.0 Preview
-![imagen](https://user-images.githubusercontent.com/91225771/193458949-9ecbf42e-6361-44f3-9551-e7dd0a071e33.png)
+![imagen](https://user-images.githubusercontent.com/91225771/196708154-cf243a51-f22e-4c40-94c6-ba53aa518bad.png)
 
-<b>Depending of the terminal or the OS, Mathall won't look the same as the photo. This picture was taken in a ArchLinux terminal 
-with a transparency effect, so the wallpaper is visible and makes Mathall more beautiful than  it is.</b>
+<b>Depending of the terminal or the OS, Mathall won't look the same as the photo (Neither the upperbar, the terminals with transparency or other effects are caused by Mathall. </b>
   
 ## Whats new in Mathall?
 - Inproved understandig of the program for the user.
