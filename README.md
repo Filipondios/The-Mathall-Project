@@ -6,10 +6,10 @@ Due to the short time available and the lack of knowledge, this same program is 
 
 <br>
 
-## What can Mathall 2.2.1 do?
+## What can Mathall 2.5.0 do?
 
 At this version, Mathall can do opetations with matrix and resolution of equations. Here is the list of the exact opetations
-that you can do in Mathall 2.2.1:
+that you can do in Mathall 2.5.0:
 
 ### Matrices Utils
 <table>
@@ -50,8 +50,8 @@ that you can do in Mathall 2.2.1:
 <br>
 
 
-## How to Run Mathall 2.2.1
-For both operating systems described below, there is a common way, which is to open the terminal and only run the following command (ALWAYS FROM THE DIRECTORY THAT THE MATHALL PROJECT IS LOCATED):
+## How to Run Mathall 2.5.0
+For both operating systems described below, there is a common way, which is to open the terminal and only run the following command :
 
 ```bash
 java -jar "Mathall/dist/Mathall.jar"
@@ -74,16 +74,18 @@ Just make a double click in the given .exe file (MathallRun.exe).
 
 <br>
 
-## Mathall 2.2.1 Preview
+## Mathall 2.5.0 Preview
 ![imagen](https://user-images.githubusercontent.com/91225771/193458949-9ecbf42e-6361-44f3-9551-e7dd0a071e33.png)
 
-<b>Depending of the terminal or the OS, Mathall won't look the same as the photo (It never would be). This picture was taken in a ArchLinux terminal 
+<b>Depending of the terminal or the OS, Mathall won't look the same as the photo. This picture was taken in a ArchLinux terminal 
 with a transparency effect, so the wallpaper is visible and makes Mathall more beautiful than  it is.</b>
   
 ## Whats new in Mathall?
 - Inproved understandig of the program for the user.
+- New logo at the main menu
 
 <br>
 
 ## Whats next in Mathall?
-- A new package to perform calculations on the euclidean space **(Possibly this update will come in Mathall 3.0.0)**
+- A new package to perform calculations on the euclidean space
+- Operations and vector manipulation
