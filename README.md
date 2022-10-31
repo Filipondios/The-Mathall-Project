@@ -75,7 +75,7 @@ Just make a double click in the given .exe file (MathallRun.exe).
 <br>
 
 ## Mathall 2.5.0 Preview
-![imagen](https://user-images.githubusercontent.com/91225771/196734228-17c526b4-b6dc-4153-8a0c-fc6d4d930daa.png)
+![imagen](https://user-images.githubusercontent.com/91225771/199078323-9774a895-3bca-47d5-af50-8b39ce17a2e4.png)
 
 <b>Depending of the terminal or the OS, Mathall won't look the same as the photo (Neither the upperbar, the terminals with transparency or other effects are caused by Mathall. </b>
   
