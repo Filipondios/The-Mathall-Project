@@ -1,0 +1,194 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{lmodern}
+
+\title{\textbf{Mathall Matrices Documentation}}
+\author{Filipondios}
+\date{2022}
+
+\begin{document}
+\maketitle
+\newpage
+
+\textbf{Introduction}
+
+In this document you will find the necessary documentation to understand the procedures and
+thoughts in all Mathall operations with matrices.\\
+
+You need to know that this isn't a math book and its not made by a mathematician, so the most
+probable thing is that the explanations aren't the best or not exactly how a mathematician would
+tell, because this document is made by a programmer just like every other out there.\\
+
+\textbf{Greetings}
+
+The only greetings i have to give is to my algebra book, that sometimes is unreadable but at least
+opens its pages for me.
+
+\newpage 
+
+\section{Operations with Matrices}
+\subsection{Matrices addition}
+
+The very first function that was added to Mathall was the addition of two matrices. It was really
+easy to perform, we only needed to add every element of each column and row with the other matrix.
+There a restriction with the addition of two matrices: Both matrices must have the same
+rows and columns. Knowing that, the resultant element of the row \textit{i} and column \textit{j} will be:
+
+\[ e_{i_j} = m1_{i_j} + m2_{i_j} \]
+
+Being $m_1$ the element in the row \textit{i} and column \textit{j} of a matrix called \textit{m1}
+and $m_2$ the element in the row \textit{i} and column \textit{j} of a matrix called \textit{m2}.
+
+
+Let's make an example and add two simple matrices:
+
+\[
+\begin{pmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    7 & 8 & 9 \\
+\end{pmatrix}
+  + 
+\begin{pmatrix}
+    9 & 8 & 7 \\
+    6 & 5 & 4 \\
+    3 & 2 & 1 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+    10 & 10 & 10 \\
+    10 & 10 & 10 \\
+    10 & 10 & 10 \\
+\end{pmatrix}
+\]
+
+In terms of code, the most efficient way to do this operations is to making the
+addition of each element in both matrices row by row. In \textit{Java} code:\\
+
+for(int i = 0; i \textless resultant.length; i++)
+
+\quad \quad \quad for(int j = 0; i \textless resultant.length; j++)
+
+\quad \quad \quad \quad \quad \quad resultant[i][j] = matrix1[i][j] + matrix2[i][j];
+
+
+\subsection{Matrices subtraction}
+
+This is really the same as the matrix addition but instead of making the addition of every element,
+the subtraction. Let's see an example:
+
+\[
+\begin{pmatrix}
+    9 & 8 & 7 \\
+    6 & 5 & 4 \\
+    3 & 2 & 1 \\
+\end{pmatrix}
+  - 
+\begin{pmatrix}
+    8 & 8 & 7 \\
+    6 & 4 & 4 \\
+    3 & 2 & 0 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1 \\
+\end{pmatrix}
+\]
+
+As you can imagine, the code is almost the same:\\
+
+for(int i = 0; i \textless resultant.length; i++)
+
+\quad \quad \quad for(int j = 0; i \textless resultant.length; j++)
+
+\quad \quad \quad \quad \quad \quad resultant[i][j] = matrix1[i][j] - matrix2[i][j];\\
+
+
+\subsection{Matrices product}
+
+Matrix product is more complicated than the matrix addition and subtraction. As you have
+seen, when doing the addition and subtraction of matrices, it generates a resulting matrix
+with the same dimension ( dimension = Rows x Columns ) as both matrices that generate it.
+
+When doing a matrix product, we get a matrix with a dimension made by the number of rows of
+the first matrix and the number of columns of the second. There is a simple restriction: 
+the number of columns of the first matrix must be the same as the second matrix number of rows.
+
+The procedure to do the matrix product is the next: You have to multiply each element of 
+each row of the first matrix with each element of each column of the second matrix and then
+add all that values. The result of that addition will be stored in the position made by: 
+the number of the row of the first matrix that you are multiplying and the column that you
+are multiplying from the second.
+
+Knowing that, lets see an example:
+
+\[
+\begin{pmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+\end{pmatrix}
+  * 
+\begin{pmatrix}
+    10 & 11 \\
+    20 & 21 \\
+    30 & 31 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+    1*10+2*20+3*30 & 1*11+2*21+3*31 \\
+    4*10+5*20+6*30 & 4*11+5*21+6*31 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+    140 & 146 \\
+    320 & 355 \\
+\end{pmatrix}
+\]
+
+A classic example of matrix product can be done with a identity matrix, that won't modify
+the resultant matrix.
+
+\[
+\begin{pmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    4 & 5 & 6 \\
+\end{pmatrix}
+  * 
+\begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    4 & 5 & 6 \\
+\end{pmatrix}
+\]
+
+Lets traduce that in code:\\
+
+
+for(int a = 0; a \textless matrix2[0].length; a++) \{
+
+\quad \quad \quad for(int i = 0; i \textless matrix1.length; i++) \{
+
+\quad \quad \quad \quad \quad \quad int resultant = 0;
+
+\quad \quad \quad \quad \quad \quad for(int j = 0; j \textless matrix1[0].length; j++)
+
+\quad \quad \quad \quad \quad \quad \quad \quad \quad element += element + matrix1[i][j]*matrix2[j][a];
+
+\quad \quad \quad \quad \quad \quad resultant[i][a] = element;\\
+
+\quad \quad \quad \}
+
+\}
+
+\end{document}
