@@ -35,21 +35,6 @@ that you can do in Mathall 2.5.0:
   </tr>
 </table>
 
-### Ecuation/s system/s Utils
-<table>
-  <tr>
-    <th>Ecuations solutions</th>
-  </tr>
-  <tr>
-    <td>Second Grade Ecuations Resolution</td>  
-  </tr>
-  <tr> 
-    <td>Linear Ecuation Systems resolution</td>
-  </tr>
-</table>
-<br>
-
-
 ## How to Run Mathall 2.5.0
 For both operating systems described below, there is a common way, which is to open the terminal and only run the following command :
 
