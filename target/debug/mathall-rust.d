@@ -1,0 +1,1 @@
+C:\Users\usuario\Desktop\git\The-Mathall-Project\target\debug\mathall-rust.exe: C:\Users\usuario\Desktop\git\The-Mathall-Project\src\main.rs C:\Users\usuario\Desktop\git\The-Mathall-Project\src\matrices.rs
