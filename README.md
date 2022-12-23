@@ -4,15 +4,15 @@
 
 ## Main Goals
 
-- [ ] : Implement the basic operations for matrices.
+- [X] : Implement the basic operations for matrices.
   - [X] : Matrices addittion 
   - [X] : Matrices substraction
   - [X] : Matrices dot product
   - [X] : Matrix determinant
   - [X] : Matrix inverse
   - [X] : Matrix traspose
-  - [ ] : Staggered matrix
-  - [ ] : Appy Gauss Method to a matrix
+  - [X] : Staggered matrix
+  - [X] : Matrix Range
 - [ ] : Ability of reading matrices that the user type as the parameters of the program.
 - [ ] : Instead of storing floating point numbers in the matrices, store integer numbers & fractions.
 - [ ] : Higher modularity (Make a better & cleaner structure for the user nderstanding)
