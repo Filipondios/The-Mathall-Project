@@ -79,6 +79,10 @@ fn main() {
     else if option == "--gauss" || option == "-g" {
         main_matrix = matrices::gauss(main_matrix);
     }
+    else{
+        print!("Option {:?} unrecognized.", option);
+        exit(0);
+    }
     
     println!("The resultant matrix is: \n");
     matrices::matrix_print(&main_matrix);
