@@ -44,7 +44,7 @@ pub fn matrix_traspose(a: Vec<Vec<f32>>) -> Vec<Vec<f32>> {
 /// The function panics if both matrices have different dimensions. For example, to add
 /// two matrices, both must have a NxM dimension, where N are the rows and M the columns.
 ///
-pub fn matrix_sum(mut a: Vec<Vec<f32>>, b: Vec<Vec<f32>>) -> Vec<Vec<f32>> {
+pub fn matrix_sum(mut a: Vec<Vec<f32>>, b: &Vec<Vec<f32>>) -> Vec<Vec<f32>> {
     let _rows_a: usize = a.len();
     let _cols_a: usize = a[0].len();
     let _rows_b: usize = b.len();
@@ -83,7 +83,7 @@ pub fn matrix_sum(mut a: Vec<Vec<f32>>, b: Vec<Vec<f32>>) -> Vec<Vec<f32>> {
 /// The function panics if both matrices have different dimensions. For example, to sub
 /// two matrices, both must have a NxM dimension, where N are the rows and M the columns.
 ///
-pub fn matrix_sub(mut a: Vec<Vec<f32>>, b: Vec<Vec<f32>>) -> Vec<Vec<f32>> {
+pub fn matrix_sub(mut a: Vec<Vec<f32>>, b: &Vec<Vec<f32>>) -> Vec<Vec<f32>> {
     let _rows_a: usize = a.len();
     let _cols_a: usize = a[0].len();
     let _rows_b: usize = b.len();
@@ -124,7 +124,7 @@ pub fn matrix_sub(mut a: Vec<Vec<f32>>, b: Vec<Vec<f32>>) -> Vec<Vec<f32>> {
 /// MxK. In other words, to multiply two matrices, the number of columns of the first matrix
 /// must be the same as the number of rows of the second.
 ///
-pub fn matrix_mult(a: &Vec<Vec<f32>>, b: &Vec<Vec<f32>>) -> Vec<Vec<f32>> {
+pub fn matrix_mult(a: Vec<Vec<f32>>, b: &Vec<Vec<f32>>) -> Vec<Vec<f32>> {
     let _rows_a: usize = a.len();
     let _cols_a: usize = a[0].len();
     let _rows_b: usize = b.len();
@@ -144,30 +144,6 @@ pub fn matrix_mult(a: &Vec<Vec<f32>>, b: &Vec<Vec<f32>>) -> Vec<Vec<f32>> {
         }
     }
     return result;
-}
-
-/// Calculates the product of a f32 number and a f32 matrix.
-///
-/// # Example
-/// ```
-/// let matrix: Vec<Vec<f32>> = vec![
-///     vec![1.0, 0.0],
-///     vec![0.0, 1.0]
-/// ];
-/// // Multiply the matrix by 3:
-/// matrix = matrices::matrix_mult_num(matrix,3);
-/// ```
-pub fn matrix_mult_num(mut a: Vec<Vec<f32>>, n: f32) -> Vec<Vec<f32>> {
-
-    let _rows_a: usize = a.len();
-    let _cols_a: usize = a[0].len();
-
-    for i in 0.._rows_a {
-        for j in 0.._cols_a {
-            a[i][j] = a[i][j]*n;
-        }
-    }
-    return a;
 }
 
 /// Calculates the inverse of a f32 matrix with the Gauss-Jordan method.
@@ -327,11 +303,10 @@ pub fn matrix_det(a: &Vec<Vec<f32>>) -> f32 {
 ///        vec![3.0, -2.0, 0.0],
 ///        vec![-2.0, 0.0, 1.0],
 /// ];
-/// matrix = matrices::matrix_estg(&matrix);
+/// matrix = matrices::matrix_estg(matrix);
 /// ```
 pub fn matrix_estg(mut a: Vec<Vec<f32>>) -> Vec<Vec<f32>> {
-
-    let _rows_a : usize = a.len();
+    let _rows_a: usize = a.len();
 
     for i in 0.._rows_a {
         // Buscamos el elemento pivot
@@ -343,11 +318,11 @@ pub fn matrix_estg(mut a: Vec<Vec<f32>>) -> Vec<Vec<f32>> {
         }
 
         a.swap(i, pivot);
-        let pivot_val : f32 = a[i][i];
+        let pivot_val: f32 = a[i][i];
 
         if pivot_val != 0.0 {
             for j in (i + 1).._rows_a {
-                let factor : f32 = a[j][i] / pivot_val;
+                let factor: f32 = a[j][i] / pivot_val;
 
                 for k in (i + 1).._rows_a {
                     a[j][k] -= factor * a[i][k];
@@ -368,7 +343,7 @@ pub fn matrix_estg(mut a: Vec<Vec<f32>>) -> Vec<Vec<f32>> {
 ///        vec![0.0, 1.0, 0.0],
 ///        vec![0.0, 0.0, 1.0],
 /// ];
-/// let range: usize = matrices::matrix_range(&matrix);
+/// let range: usize = matrices::matrix_range(matrix);
 /// ```
 pub fn matrix_range(mut a: Vec<Vec<f32>>) -> usize {
     a = gauss(a);
@@ -377,21 +352,30 @@ pub fn matrix_range(mut a: Vec<Vec<f32>>) -> usize {
     for i in 0..a.len() {
         for j in 0..a[0].len() {
             if a[i][j] != 0.0 {
-                range+=1;
+                range += 1;
                 break;
             }
         }
     }
-    return if range==0 {1} else {range};
+    return if range == 0 { 1 } else { range };
 }
 
+/// Applies the gauss method to a f32 matrix.
+///
+/// # Example
+/// ```
+/// let matrix: Vec<Vec<f32>> = vec![
+///        vec![1.0, 0.0, 0.0],
+///        vec![0.0, 1.0, 0.0],
+///        vec![0.0, 0.0, 1.0],
+/// ];
+/// let range: usize = matrices::gauss(matrix);
+/// ```
 pub fn gauss(mut a: Vec<Vec<f32>>) -> Vec<Vec<f32>> {
-
     let _rows_a = a.len();
     let _cols_a: usize = a[0].len();
 
     if a[0][0] == 0.0 {
-
         let mut _all_null_: bool = true;
         let mut not_null_row: usize = 1;
 
@@ -411,25 +395,22 @@ pub fn gauss(mut a: Vec<Vec<f32>>) -> Vec<Vec<f32>> {
         drop(not_null_row);
     }
 
-    for i in 0..(_cols_a-1) {
-        for j in (i+1).._rows_a {
+    for i in 0..(_cols_a - 1) {
+        for j in (i + 1).._rows_a {
             if a[j][i] != 0.0 {
-                let _mcm_: f32 = a[j][i]/a[i][i];
+                let _mcm_: f32 = a[j][i] / a[i][i];
                 for k in 0.._cols_a {
-                    a[j][k] -= a[i][k]*_mcm_; 
+                    a[j][k] -= a[i][k] * _mcm_;
                 }
             }
         }
     }
 
-    if a[_rows_a-2][_cols_a-2] == 0.0 {
-        a[_rows_a-1][_cols_a-1] = 0.0;
+    if a[_rows_a - 2][_cols_a - 2] == 0.0 {
+        a[_rows_a - 1][_cols_a - 1] = 0.0;
     }
     return a;
 }
-
-
-
 
 /// Prints a f32 matrix in the console.
 ///
