@@ -14,7 +14,7 @@
   - [X] : Staggered matrix
   - [X] : Matrix Range
   - [X] : Gauss Method to a matrix
-- [ ] : Ability of reading matrices that the user type as the parameters of the program.
+- [X] : Ability of reading matrices that the user type as the parameters of the program.
 - [ ] : Instead of storing floating point numbers in the matrices, store integer numbers & fractions.
 - [ ] : Higher modularity (Make a better & cleaner structure for the user nderstanding)
 
