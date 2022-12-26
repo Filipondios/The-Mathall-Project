@@ -32,10 +32,10 @@ Most of Mathall's options only accepts one matrix as parameter:
 mathall --option "matrix" # Large syntax
 mathall -o "matrix1" # Short syntax
 ``` 
-A matrix must be written with the next syntax: `"[{n1,n2,n3},{n4,n5,n6},...{nm-2,nm-1,nm}]"`. For example, lets traduce a 3x3 identity matrix to the Mathall matrix syntax:
+A matrix must be written with the next syntax: `"[{n1,n2,n3,...,nm1},{n4,n5,n6,...,nm2},...]"`. For example, lets traduce a 3x3 identity matrix to the Mathall matrix syntax:
 ```
 [ 1   0   0 ]
-[ 0   1   0 ] = "[{1,0,0}{0,1,0}{0,0,1}]"
+[ 0   1   0 ] = "[{1,0,0},{0,1,0},{0,0,1}]"
 [ 0   0   1 ]
 ```
 
